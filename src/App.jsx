@@ -5,6 +5,8 @@ import Services from "./components/Services";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import PurposeSection from "./components/PurposeSection";
+import FeaturesSection from "./components/FeaturesSection";
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
         <div className="overflow-hidden">
           <Navbar />
           <HeroSection />
-          <AboutUs />
+          <PurposeSection />
+          {/* <AboutUs /> */}
           <Brands />
-          <Services />
+          <FeaturesSection />
+          {/* <Services /> */}
           <Footer />
         </div>
       </main>

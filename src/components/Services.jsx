@@ -1,4 +1,4 @@
-import { services } from "../assets/data";
+import { features } from "../assets/data";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { BiCheckCircle } from "react-icons/bi";
@@ -23,7 +23,7 @@ const Services = () => {
       </div>
 
       <div className="flex flex-wrap justify-center mt-10 lg:mt-20">
-        {services.map((service, index) => (
+        {features.map((service, index) => (
           <div key={index} className="w-48 lg:w-1/3 px-4 py-2">
             <div className="bg-neutral rounded-md p-6 text-md border border-neutral-800 font-thin">
               <div className="flex mt-8 items-center justify-center">
@@ -36,13 +36,13 @@ const Services = () => {
               </div>
 
               <ul>
-                {service.serviceLists.map((serviceList, index) => (
+                {service.featureLists.map((featureList, index) => (
                   <li
                     key={index}
                     className="mt-2 flex items-center justify-center"
                   >
                     <BiCheckCircle />
-                    <span className="ml-2">{serviceList}</span>
+                    <span className="ml-2">{featureList}</span>
                   </li>
                 ))}
               </ul>

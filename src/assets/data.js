@@ -1,27 +1,39 @@
 //   purpose section
 
-export const purpose = [
+export const purposes = [
   {
     icon: "🟣", // Replace with your actual icon component or image
-    title: "Built for impact",
+    title: "Expertise & Experience",
     description:
-      "We identify and nurture a truly diverse team of designers, developers and marketers",
+      "Our team comprises industry professionals with years of experience in security, fire safety, and entertainment solutions.",
   },
   {
     icon: "🔴", // Replace with your actual icon component or image
-    title: "In sync with you",
+    title: "Quality Products",
     description:
-      "We work the way you do by adapting to your workflows and rhythm we aim to blend in for a seamless.",
+      "We partner with trusted brands to provide state-of-the-art equipment.",
+  },
+  {
+    icon: "🔴", // Replace with your actual icon component or image
+    title: "Customized Solutions",
+    description:
+      "Every client has unique needs, and we tailor our services to match their specific requirements.",
+  },
+  {
+    icon: "🟣", // Replace with your actual icon component or image
+    title: "Reliable Support",
+    description:
+      "We offer ongoing maintenance and customer support to ensure system efficiency and longevity.",
   },
 ];
 
 //   features section
 
-export const services = [
+export const features = [
   {
     icon: "🔍",
     title: "UAV & Drone Services",
-    serviceLists: [
+    featureLists: [
       "Aerial photography and video capture",
       "Drone mapping and 3D modeling",
       "Monitoring for farms and job sites",
@@ -31,31 +43,31 @@ export const services = [
   {
     icon: "⚙️",
     title: " Security Services",
-    serviceLists: [
-      "Aerial photography and video capture",
-      "Drone mapping and 3D modeling",
-      "Monitoring for farms and job sites",
-      "Licensed pilots and safe operations",
+    featureLists: [
+      "Surveillance camera systems (CCTV)",
+      "Access control systems",
+      "Alarm and intrusion detection systems",
+      "Security system installation and maintenance",
     ],
   },
   {
     icon: "🚀",
     title: "Fire & Safety Equipment",
-    serviceLists: [
-      "Aerial photography and video capture",
-      "Drone mapping and 3D modeling",
-      "Monitoring for farms and job sites",
-      "Licensed pilots and safe operations",
+    featureLists: [
+      "Fire alarms and smoke detectors",
+      "Fire extinguishers and suppression systems",
+      "Emergency exit lighting and signage",
+      " Fire safety consultation and compliance",
     ],
   },
   {
     icon: "🚀",
-    title: "Home Entertainment & HD Sound System Installation",
-    serviceLists: [
-      "Aerial photography and video capture",
-      "Drone mapping and 3D modeling",
-      "Monitoring for farms and job sites",
-      "Licensed pilots and safe operations",
+    title: "Home Entertainment & Installations",
+    featureLists: [
+      " Smart home automation with HD streaming and multi-room A/V",
+      "Custom home theaters and pro sound system setups",
+      " High-fidelity audio for homes and businesses",
+      "Acoustic design and indoor/outdoor audio installs",
     ],
   },
 ];

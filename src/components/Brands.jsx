@@ -1,12 +1,14 @@
 import React from "react";
-import slack from "../assets/slack.png";
-import amazon from "../assets/amazon.png";
-import woocommerce from "../assets/woocommerce.png";
-import meundies from "../assets/meundies.png";
-import sitepoint from "../assets/sitepoint.png";
+import Delair from "../assets/delair.png";
+import Dji from "../assets/dji.png";
+import Epsilon from "../assets/epsilon.png";
+import Flir from "../assets/flir.png";
+import Pendulum from "../assets/pendulum.png";
+import Propel from "../assets/propel.png";
+import Sentera from "../assets/sentera.png";
 
 const Brands = () => {
-  const logos = [slack, amazon, woocommerce, meundies, sitepoint];
+  const logos = [Delair, Dji, Epsilon, Flir, Pendulum, Propel, Sentera];
 
   return (
     <div className="w-full overflow-hidden container mx-auto py-20 px-4 sm:px-6 lg:px-8 flex sm:flex-row flex-col sm:items-center items-start">
@@ -19,7 +21,7 @@ const Brands = () => {
             key={index}
             src={logo}
             alt="company logo"
-            className="mx-12 h-8 w-36 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
+            className="mx-12 h-13 w-30 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
           />
         ))}
 
