@@ -19,8 +19,8 @@ function App() {
           <PurposeSection />
           {/* <AboutUs /> */}
           <Brands />
+          <Services />
           <FeaturesSection />
-          {/* <Services /> */}
           <Footer />
         </div>
       </main>

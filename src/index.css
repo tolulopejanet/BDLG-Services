@@ -4,6 +4,12 @@
   animation: marquee 25s linear infinite;
 }
 
+@theme {
+  --color-primary: #080806;
+}
+.primary-container {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
 @keyframes marquee {
   0% {
     transform: translateX(0);

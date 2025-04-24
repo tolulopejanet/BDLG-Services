@@ -31,7 +31,8 @@ export const purposes = [
 
 export const features = [
   {
-    icon: "🔍",
+    id: "tab1",
+    icon: "🚀",
     title: "UAV & Drone Services",
     featureLists: [
       "Aerial photography and video capture",
@@ -41,6 +42,7 @@ export const features = [
     ],
   },
   {
+    id: "tab2",
     icon: "⚙️",
     title: " Security Services",
     featureLists: [
@@ -51,7 +53,8 @@ export const features = [
     ],
   },
   {
-    icon: "🚀",
+    id: "tab3",
+    icon: "⚙️",
     title: "Fire & Safety Equipment",
     featureLists: [
       "Fire alarms and smoke detectors",
@@ -61,6 +64,7 @@ export const features = [
     ],
   },
   {
+    id: "tab4",
     icon: "🚀",
     title: "Home Entertainment & Installations",
     featureLists: [
