@@ -90,7 +90,7 @@ const Services = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="flex flex-col  justify-between gap-16">
             <div>
-              <p className="text-xl">
+              <p className="text-gray-600 text-lg md:text-xl">
                 Our services include cutting-edge security, fire & safety
                 solutions, home entertainment, and premium HD sound systems
                 designed for your safety, comfort, and enjoyment.
