@@ -10,7 +10,7 @@ const FeaturesSection = () => {
       video:
         "https://res.cloudinary.com/dtpz7bztd/video/upload/v1745478420/Ctronics_PTZ_CCTV_Camera_Surveillance_-2K_HD_Security_Camera_Outdoo_f6wkd9.mp4",
       poster:
-        "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/6705703132e8c6c85119c96d_design-assistant.avif",
+        "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564549/drones_csljhu.jpg",
     },
     {
       id: "ai-2",
@@ -20,7 +20,7 @@ const FeaturesSection = () => {
       video:
         "https://res.cloudinary.com/dtpz7bztd/video/upload/v1745478420/Ctronics_PTZ_CCTV_Camera_Surveillance_-2K_HD_Security_Camera_Outdoo_f6wkd9.mp4",
       poster:
-        "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/67057031236cd506cd0ae632_writing-assistant.avif",
+        "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564549/drones_csljhu.jpg",
     },
     {
       id: "ai-3",
@@ -30,7 +30,7 @@ const FeaturesSection = () => {
       video:
         "https://res.cloudinary.com/dtpz7bztd/video/upload/v1745478420/Ctronics_PTZ_CCTV_Camera_Surveillance_-2K_HD_Security_Camera_Outdoo_f6wkd9.mp4",
       poster:
-        "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/67057031236cd506cd0ae632_writing-assistant.avif",
+        "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564549/drones_csljhu.jpg",
     },
     {
       id: "ai-4",
@@ -40,7 +40,7 @@ const FeaturesSection = () => {
       video:
         "https://res.cloudinary.com/dtpz7bztd/video/upload/v1745478420/Ctronics_PTZ_CCTV_Camera_Surveillance_-2K_HD_Security_Camera_Outdoo_f6wkd9.mp4",
       poster:
-        "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/67057031236cd506cd0ae632_writing-assistant.avif",
+        "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564549/drones_csljhu.jpg",
     },
   ];
 

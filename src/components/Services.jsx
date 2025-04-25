@@ -7,32 +7,32 @@ const tabsData = [
     title: "UAV & Drone Services",
     subtitle:
       "Aerial photography and video capture, Drone mapping and 3D modeling, Monitoring for farms and job sites, Licensed pilots and safe operations.",
-    video:
-      "https://res.cloudinary.com/dtpz7bztd/video/upload/v1745478233/Future_Drone_Has_ARRIVED_-_Hybrid_Robotics_hauqea.mp4",
+    image:
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564549/drones_csljhu.jpg",
   },
   {
     id: "tab2",
     title: "Security Services",
     subtitle:
       "Surveillance camera systems (CCTV), Access control systems, Alarm and intrusion detection systems, Security system installation and maintenance.",
-    video:
-      "https://res.cloudinary.com/dtpz7bztd/video/upload/v1745478420/Ctronics_PTZ_CCTV_Camera_Surveillance_-2K_HD_Security_Camera_Outdoo_f6wkd9.mp4",
+    image:
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564651/survellance_iab19a.jpg",
   },
   {
     id: "tab3",
     title: "Fire & Safety Equipment",
     subtitle:
       "Fire alarms and smoke detectors, Fire extinguishers and suppression systems, Emergency exit lighting and signage, Fire safety consultation and compliance.",
-    video:
-      "https://res.cloudinary.com/dtpz7bztd/video/upload/v1745478233/Future_Drone_Has_ARRIVED_-_Hybrid_Robotics_hauqea.mp4",
+    image:
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564611/fire_safety_dvay0w.jpg",
   },
   {
     id: "tab4",
     title: "Home Entertainment & HD Sound System Installation",
     subtitle:
       " Smart home automation with HD streaming and multi-room A/V, Custom home theaters and pro sound system setups, High-fidelity audio for homes and businesses, Acoustic design and indoor/outdoor audio installs.",
-    video:
-      "https://res.cloudinary.com/dtpz7bztd/video/upload/v1745478420/Ctronics_PTZ_CCTV_Camera_Surveillance_-2K_HD_Security_Camera_Outdoo_f6wkd9.mp4",
+    image:
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564682/Home-sound_arazgv.jpg",
   },
 ];
 
@@ -77,21 +77,6 @@ const Services = () => {
   };
 
   //toggle video
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-
-    const video = document.querySelector(`video[data-tab="${activeTab}"]`);
-
-    if (video) {
-      if (isPlaying) {
-        video.pause();
-        clearInterval(progressInterval.current);
-      } else {
-        video.play();
-        startProgressTimer();
-      }
-    }
-  };
 
   return (
     <div className="overflow-hidden py-24 text-gray-900  bg-gray-50 ">
@@ -151,27 +136,7 @@ const Services = () => {
                     activeTab === tab.id ? "opacity-100" : "opacity-0 hidden"
                   }`}
                 >
-                  <video
-                    src={tab.video}
-                    className="w-full rounded-lg"
-                    autoPlay
-                    muted
-                    playsInline
-                    loop
-                    data-tab={tab.id}
-                  ></video>
-
-                  {/* play icon */}
-                  <button
-                    onClick={togglePlayPause}
-                    className="p-2 text-red-400 hover:text-red-900 cursor-pointer"
-                  >
-                    {isPlaying ? (
-                      <BsPauseFill size={24} />
-                    ) : (
-                      <BsPlayFill size={24} />
-                    )}
-                  </button>
+                  <img src={tab.image} className="w-full rounded-lg"></img>
                 </div>
               ))}
             </div>
