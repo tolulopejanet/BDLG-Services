@@ -1,4 +1,5 @@
 import "./App.css";
+import { Routes, Route } from "react-router";
 import Brands from "./components/Brands";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
@@ -7,13 +8,14 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PurposeSection from "./components/PurposeSection";
 import FeaturesSection from "./components/FeaturesSection";
+import ContactUs from "./routes/ContactUs";
 
 function App() {
   return (
     <>
-      <main className="relative min-h-screen overflow-x-hidden">
+      <main className="relative min-h-screen">
         <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-full blur-[80px] -z-10"></div>
-        <div className="overflow-hidden">
+        <div className="">
           <Navbar />
           <HeroSection />
           <PurposeSection />
@@ -22,6 +24,10 @@ function App() {
           <Services />
           <FeaturesSection />
           <Footer />
+
+          <Routes>
+            <Route path="/ContactUs" element={<ContactUs />} />
+          </Routes>
         </div>
       </main>
     </>

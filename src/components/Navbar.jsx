@@ -12,7 +12,7 @@ const Navbar = () => {
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#services", label: "Our Services" },
-    { href: "#testimonials", label: "Testimonials" },
+    { href: "#trainings", label: "Trainings" },
   ];
 
   return (
@@ -90,7 +90,7 @@ const Navbar = () => {
             ))}
 
             <button className="w-full bg-blue-600 text-white px-6 py-2 5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100">
-              <a href="#newsletter">Contact Us</a>
+              <a href="#">Contact Us</a>
             </button>
           </div>
         </div>

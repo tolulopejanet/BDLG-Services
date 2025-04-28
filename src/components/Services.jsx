@@ -42,7 +42,7 @@ const Services = () => {
   const [progress, setProgress] = useState(0);
 
   const progressInterval = useRef(null);
-  const PROGRESS_DURATION = 10000;
+  const PROGRESS_DURATION = 5000;
   const UPDATE_INTERVAL = 100;
 
   useEffect(() => {
@@ -79,10 +79,13 @@ const Services = () => {
   //toggle video
 
   return (
-    <div className="overflow-hidden py-24 text-gray-900  bg-gray-50 ">
+    <div
+      className="overflow-hidden py-24 text-gray-900  bg-gray-50 "
+      id="services"
+    >
       <div className="primary-container">
         <div className="max-w-[50rem] lg:mb-24 mb-12">
-          <h2 className="sm:text-6xl text-5xl md:text-7xl font-bold text-gray-900 mb-8">
+          <h2 className="sm:text-6xl text-5xl md:text-5xl font-bold text-gray-900 mb-8">
             Our Services
           </h2>
         </div>

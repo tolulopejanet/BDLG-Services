@@ -26,7 +26,7 @@ const FeaturesSection = () => {
       id: "ai-3",
       title: "Health, Safety, Security & Environment",
       description:
-        "At BDLG, safety is our top priority. We strictly adhere to all regulatory requirements and industry standards to ensure our security, fire safety, and entertainment solutions comply with local and international guidelines. Our team follows best practices in installation, maintenance, and operations, providing our clients with secure and reliable systems that meet legal and safety regulations. Through continuous training and adherence to safety protocols, we strive to maintain the highest standards of compliance and operational ",
+        "At BDLG, safety is our top priority. We strictly adhere to all regulatory requirements and industry standards to ensure our security, fire safety, and entertainment solutions comply with local and international guidelines.",
       video:
         "https://res.cloudinary.com/dtpz7bztd/video/upload/v1745478420/Ctronics_PTZ_CCTV_Camera_Surveillance_-2K_HD_Security_Camera_Outdoo_f6wkd9.mp4",
       poster:
@@ -81,16 +81,16 @@ const FeaturesSection = () => {
   }, []);
 
   return (
-    <div className="py-24 text-gray-900">
+    <div className="py-24 text-gray-900" id="trainings">
       <div className="primary-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-32 gap-8">
           <div className="md:mb-24">
-            <h2 className="text-5xl md:text-7xl font-bold mb-8 max-w-[50rem]">
+            <h2 className="text-5xl md:text-5xl font-bold mb-8 max-w-[50rem]">
               Our Training Program
             </h2>
           </div>
           <div className="mb-24">
-            <p className="text-xl text-gray-600 mb-8 max-w-[35rem]">
+            <p className="text-lg text-gray-600 mb-8 max-w-[35rem]">
               Our comprehensive training programs combine in-person hands-on
               workshops, expert led online modules, and real-world
               scenario-based training to ensure participants gain in depth
@@ -122,32 +122,18 @@ const FeaturesSection = () => {
 
           {/* content */}
           <div>
-            {/* intro text */}
-            <div className="md:mb-28 mb-16 md:h-72 border-b border-black/10 pb-16">
-              <div className="max-w-[35ch] mb-4">
-                <h3 className="text-2xl font-semibold">
-                  Health, Safety, Security & Environment
-                </h3>
-              </div>
-              <p className="text-xl text-gray-500 mb-8 max-w-[35rem]">
-                We strictly adhere to all regulatory requirements and industry
-                standards to ensure our security, fire safety, and entertainment
-                solutions comply with local and international guidelines.
-              </p>
-            </div>
-
             {/* features text */}
             <div ref={featuresRef} className="space-y-24">
               {features.map((feature, index) => (
                 <div
                   key={feature.id}
                   id={feature.id}
-                  className="feature-item scroll-mt-24 md:h-72 border-b border-black/10 pb-16"
+                  className="feature-item scroll-mt-24 md:h-72 border-b border-black/10 bg-gray-50 p-5 text-justify flex flex-col justify-center"
                 >
-                  <div className="max-w-[35ch] mb-4">
+                  <div className="max-w-[55ch] mb-4">
                     <h3 className="text-2xl font-semibold">{feature.title}</h3>
                   </div>
-                  <p className="text-xl text-gray-500 mb-8 max-w-[35rem]">
+                  <p className="text-lg text-gray-500 mb-8 max-w-[35rem]">
                     {feature.description}
                   </p>
                 </div>
