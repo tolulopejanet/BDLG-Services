@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HiX, HiMenu } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,10 +10,10 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState("#home");
 
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#services", label: "Our Services" },
-    { href: "#trainings", label: "Trainings" },
+    { href: "/", label: "Home" },
+    { href: "/AboutUs", label: "About" },
+    { href: "/ServicesSection", label: "Our Services" },
+    { href: "/trainings", label: "Trainings" },
   ];
 
   return (
@@ -47,9 +48,9 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link, index) => (
-            <a
+            <Link
+              to={link.href}
               key={index}
-              href={link.href}
               onClick={() => setActiveLink(link.href)}
               className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all ${
                 activeLink === link.href
@@ -58,13 +59,13 @@ const Navbar = () => {
               }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* get in touch */}
         <button className="hidden md:block bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100">
-          <a href="#newsletter">Contact Us</a>
+          <Link to="/ContactUs">Contact Us</Link>
         </button>
       </div>
 
@@ -90,7 +91,7 @@ const Navbar = () => {
             ))}
 
             <button className="w-full bg-blue-600 text-white px-6 py-2 5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100">
-              <a href="#">Contact Us</a>
+              <Link to="/ContactUs">Contact Us</Link>
             </button>
           </div>
         </div>

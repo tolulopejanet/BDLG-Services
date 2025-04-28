@@ -85,7 +85,7 @@ const FeaturesSection = () => {
       <div className="primary-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-32 gap-8">
           <div className="md:mb-24">
-            <h2 className="text-5xl md:text-5xl font-bold mb-8 max-w-[50rem]">
+            <h2 className="text-5xl md:text-7xl font-bold mb-8 max-w-[50rem]">
               Our Training Program
             </h2>
           </div>

@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { BsPauseFill, BsPlayFill } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
 
 const tabsData = [
   {
@@ -36,7 +38,7 @@ const tabsData = [
   },
 ];
 
-const Services = () => {
+const ServiceSection = () => {
   const [activeTab, setActiveTab] = useState("tab1");
   const [isPlaying, setIsPlaying] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -79,75 +81,83 @@ const Services = () => {
   //toggle video
 
   return (
-    <div
-      className="overflow-hidden py-24 text-gray-900  bg-gray-50 "
-      id="services"
+    <motion.section
+      variants={fadeIn("up", 0.4)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="container pt-4 pb-6 px-4 sm:px-6 lg:px-8"
     >
-      <div className="primary-container">
-        <div className="max-w-[50rem] lg:mb-24 mb-12">
-          <h2 className="sm:text-6xl text-5xl md:text-5xl font-bold text-gray-900 mb-8">
-            Our Services
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div className="flex flex-col  justify-between gap-16">
-            <div>
-              <p className="text-gray-600 text-lg md:text-xl">
-                Our services include cutting-edge security, fire & safety
-                solutions, home entertainment, and premium HD sound systems
-                designed for your safety, comfort, and enjoyment.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {tabsData.map((tab) => (
-                <div
-                  onClick={() => handleClick(tab.id)}
-                  className="relative pl-4 cursor-pointer"
-                >
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-800">
-                    {activeTab === tab.id && (
-                      <div
-                        className="absolute top-0 left-0 w-full bg-red-600 transition-all duration-100"
-                        style={{ height: `${progress}%` }}
-                      ></div>
-                    )}
-                  </div>
-
-                  <h3 className="text-xl font-semibold mb-2">{tab.title}</h3>
-
-                  <p
-                    className={`text-gray-500 transition-all duration-300 ${
-                      activeTab === tab.id
-                        ? "h-auto opacity-100"
-                        : "h-0 opacity-0 overflow-hidden"
-                    }`}
-                  >
-                    {tab.subtitle}
-                  </p>
-                </div>
-              ))}
-            </div>
+      <div
+        className="overflow-hidden py-24 text-gray-900  bg-gray-50 "
+        id="services"
+      >
+        <div className="primary-container">
+          <div className="max-w-[50rem] lg:mb-24 mb-12">
+            <h2 className="sm:text-6xl text-5xl md:text-5xl font-bold text-gray-900 mb-8">
+              Our Services
+            </h2>
           </div>
 
-          <div className="relative">
-            <div className="max-w-[640px] mx-auto">
-              {tabsData.map((tab) => (
-                <div
-                  className={`transition-opacity duration-500 ${
-                    activeTab === tab.id ? "opacity-100" : "opacity-0 hidden"
-                  }`}
-                >
-                  <img src={tab.image} className="w-full rounded-lg"></img>
-                </div>
-              ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="flex flex-col  justify-between gap-16">
+              <div>
+                <p className="text-gray-600 text-lg md:text-xl text-justify">
+                  Our services include cutting-edge security, fire & safety
+                  solutions, home entertainment, and premium HD sound systems
+                  designed for your safety, comfort, and enjoyment.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                {tabsData.map((tab) => (
+                  <div
+                    onClick={() => handleClick(tab.id)}
+                    className="relative pl-4 cursor-pointer"
+                  >
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-800">
+                      {activeTab === tab.id && (
+                        <div
+                          className="absolute top-0 left-0 w-full bg-red-600 transition-all duration-100"
+                          style={{ height: `${progress}%` }}
+                        ></div>
+                      )}
+                    </div>
+
+                    <h3 className="text-xl font-semibold mb-2">{tab.title}</h3>
+
+                    <p
+                      className={`text-gray-500 transition-all duration-300 ${
+                        activeTab === tab.id
+                          ? "h-auto opacity-100"
+                          : "h-0 opacity-0 overflow-hidden"
+                      }`}
+                    >
+                      {tab.subtitle}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="max-w-[640px] mx-auto">
+                {tabsData.map((tab) => (
+                  <div
+                    className={`transition-opacity duration-500 ${
+                      activeTab === tab.id ? "opacity-100" : "opacity-0 hidden"
+                    }`}
+                  >
+                    <img src={tab.image} className="w-full rounded-lg"></img>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 
-export default Services;
+export default ServiceSection;

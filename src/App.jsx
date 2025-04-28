@@ -1,14 +1,27 @@
 import "./App.css";
 import { Routes, Route } from "react-router";
 import Brands from "./components/Brands";
-import AboutUs from "./components/AboutUs";
-import Services from "./components/Services";
+import AboutUs from "./routes/AboutUs";
+import ServiceSection from "./components/Services";
+// import ServicesSection from "./routes/Services";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PurposeSection from "./components/PurposeSection";
 import FeaturesSection from "./components/FeaturesSection";
 import ContactUs from "./routes/ContactUs";
+
+function Home() {
+  return (
+    <>
+      <HeroSection />
+      <PurposeSection />
+      <Brands />
+      <ServiceSection />
+      <FeaturesSection />
+    </>
+  );
+}
 
 function App() {
   return (
@@ -17,17 +30,14 @@ function App() {
         <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-full blur-[80px] -z-10"></div>
         <div className="">
           <Navbar />
-          <HeroSection />
-          <PurposeSection />
-          {/* <AboutUs /> */}
-          <Brands />
-          <Services />
-          <FeaturesSection />
-          <Footer />
 
           <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/AboutUs" element={<AboutUs />} />
+            <Route path="/ServicesSection" element={<ServiceSection />} />
             <Route path="/ContactUs" element={<ContactUs />} />
           </Routes>
+          <Footer />
         </div>
       </main>
     </>
