@@ -7,6 +7,7 @@
 @theme {
   --color-primary: #080806;
 }
+
 .primary-container {
   @apply container mx-auto px-4 sm:px-6 lg:px-8;
 }
@@ -22,4 +23,21 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+}
+
+.activeImage {
+  opacity: 1;
+  z-index: 1;
+}
+.inactiveImage {
+  opacity: 0.5;
+  z-index: -1;
+}
+.activeDesc {
+  opacity: 1;
+  visibility: visible;
+}
+.inactiveDesc {
+  opacity: 0;
+  visibility: hidden;
 }

@@ -1,4 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
+import Training1 from "../assets/training1.png";
+import Training2 from "../assets/training2.png";
+import Training3 from "../assets/training3.jpg";
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
+
+const images = [
+  Training1,
+  Training2,
+  Training3,
+  Training3,
+  Training1,
+  Training2,
+  Training2,
+  Training3,
+  Training1,
+];
 
 const FeaturesSection = () => {
   const features = [
@@ -44,6 +61,23 @@ const FeaturesSection = () => {
     },
   ];
 
+  const [startIndex, setStartIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStartIndex((prevIndex) => (prevIndex + 3) % images.length);
+    }, 5000); // Switch every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Get 3 images starting from startIndex
+  const currentImages = [
+    images[startIndex % images.length],
+    images[(startIndex + 1) % images.length],
+    images[(startIndex + 2) % images.length],
+  ];
+
   const [activeFeature, setActiveFeature] = useState(0);
   const featuresRef = useRef(null);
   const observerRef = useRef(null);
@@ -81,16 +115,23 @@ const FeaturesSection = () => {
   }, []);
 
   return (
-    <div className="py-24 text-gray-900" id="trainings">
+    <motion.div
+      variants={fadeIn("up", 0.4)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="py-24 text-gray-900"
+      id="trainings"
+    >
       <div className="primary-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-32 gap-8">
-          <div className="md:mb-24">
-            <h2 className="text-5xl md:text-7xl font-bold mb-8 max-w-[50rem]">
-              Our Training Program
+        <div className="flex flex-col items-center justify-center">
+          <div className="md:mb-12">
+            <h2 className="text-5xl sm:text-4xl font-bold mb-12">
+              Get Trained. Get Ahead.
             </h2>
           </div>
-          <div className="mb-24">
-            <p className="text-lg text-gray-600 mb-8 max-w-[35rem]">
+          <div className="mb-12">
+            <p className="text-lg text-gray-600 mb-3 max-w-[65rem] text-center">
               Our comprehensive training programs combine in-person hands-on
               workshops, expert led online modules, and real-world
               scenario-based training to ensure participants gain in depth
@@ -99,9 +140,42 @@ const FeaturesSection = () => {
           </div>
         </div>
 
-        {/* image and content */}
+        <section
+          className="w-full bg-gray-50 py-16 px-4 sm:px-6 md:px-8"
+          id="about"
+        >
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              variants={fadeIn("down", 0.7)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="grid md:grid-cols-3 grid-cols-1 gap-8"
+            >
+              {currentImages.map((img, index) => (
+                <div
+                  key={index}
+                  className="overflow-hidden rounded-xl shadow-md"
+                >
+                  <img
+                    src={img}
+                    alt={`Slide ${index}`}
+                    className="w-full h-64 object-cover transition-all duration-700"
+                  />
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-32 gap-8">
+        {/* image and content */}
+        <div className="mt-12">
+          <h2 className="text-5xl text-center sm:text-4xl font-bold mb-12">
+            Our Capabilities
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-20 gap-8 pt-10">
           {/* image */}
           <div>
             <div className="sticky top-24">
@@ -142,7 +216,7 @@ const FeaturesSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

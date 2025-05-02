@@ -9,16 +9,16 @@ import { footerLinks } from "../assets/data";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-700 flex items-center">
+    <footer className="bg-gray-700">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid:cols-12 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
           <div className="lg:col-span-4">
             <div className="flex gap-1 items-center">
               <span className="text-xl font-medium ml-1 text-white">
                 About Us
               </span>
             </div>
-            <p className="text-gray-400 mb-6 text-sm">
+            <p className="text-gray-400 mb-6 text-sm md-w-3/4">
               We have several years of development experience covering a wide
               variety of VTOL multi-rotor and fixed wing aircraft, we now offer
               some of the toughest and most durable industrial multi-rotor and
@@ -52,11 +52,28 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
-            <div>
+          <div className="lg:col-span-8 text-white">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {Object.entries(footerLinks).map(
                 ([category, links], categoryIndex) => (
-                  <div className="text-lg font-medium">{category}</div>
+                  <div
+                    key={category}
+                    className="text-lg font-medium mb-4 uppercase"
+                  >
+                    <h3 className="text-lg font-medium mb-4 uppercase">
+                      {category}
+                    </h3>
+                    <ul className="space-y-3">
+                      {links.map((link, index) => (
+                        <li
+                          className="text-gray-400 hover:text-gray-900 text-sm"
+                          key={index}
+                        >
+                          <a href="#">{link.name}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )
               )}
             </div>

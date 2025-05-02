@@ -3,13 +3,15 @@ import { Routes, Route } from "react-router";
 import Brands from "./components/Brands";
 import AboutUs from "./routes/AboutUs";
 import ServiceSection from "./components/Services";
-// import ServicesSection from "./routes/Services";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PurposeSection from "./components/PurposeSection";
 import FeaturesSection from "./components/FeaturesSection";
 import ContactUs from "./routes/ContactUs";
+import ServicePage from "./routes/ServicePage";
+import Training from "./routes/Training";
+import Blog from "./routes/Blog";
 
 function Home() {
   return (
@@ -34,7 +36,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/AboutUs" element={<AboutUs />} />
-            <Route path="/ServicesSection" element={<ServiceSection />} />
+            <Route path="/Services" element={<ServicePage />} />
+            <Route path="/Training" element={<Training />} />
+            <Route path="/Blog" element={<Blog />} />
             <Route path="/ContactUs" element={<ContactUs />} />
           </Routes>
           <Footer />

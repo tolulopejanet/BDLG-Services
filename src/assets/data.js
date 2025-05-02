@@ -29,7 +29,7 @@ export const purposes = [
 
 //   features section
 
-export const features = [
+const features = [
   {
     id: "tab1",
     icon: "🚀",
@@ -155,7 +155,7 @@ export const footerLinks = {
     { name: "Contact Us", href: "#" },
   ],
   getHelp: [
-    { name: "Support Carrer", href: "#" },
+    { name: "Support Care", href: "#" },
     { name: "24h Service", href: "#" },
     { name: "Quick Chat", href: "#" },
   ],

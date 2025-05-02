@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { BsPauseFill, BsPlayFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
+// import Training1 from "../assets/training1.png";
+// import Training2 from "../assets/training2.png";
+// import Training3 from "../assets/training3.jpg";
 
 const tabsData = [
   {
@@ -10,7 +13,7 @@ const tabsData = [
     subtitle:
       "Aerial photography and video capture, Drone mapping and 3D modeling, Monitoring for farms and job sites, Licensed pilots and safe operations.",
     image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564549/drones_csljhu.jpg",
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/13_hdcjas.jpg",
   },
   {
     id: "tab2",
@@ -18,7 +21,7 @@ const tabsData = [
     subtitle:
       "Surveillance camera systems (CCTV), Access control systems, Alarm and intrusion detection systems, Security system installation and maintenance.",
     image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564651/survellance_iab19a.jpg",
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/15_ei915i.jpg",
   },
   {
     id: "tab3",
@@ -26,7 +29,7 @@ const tabsData = [
     subtitle:
       "Fire alarms and smoke detectors, Fire extinguishers and suppression systems, Emergency exit lighting and signage, Fire safety consultation and compliance.",
     image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564611/fire_safety_dvay0w.jpg",
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/14_h4bccc.jpg",
   },
   {
     id: "tab4",
@@ -34,7 +37,7 @@ const tabsData = [
     subtitle:
       " Smart home automation with HD streaming and multi-room A/V, Custom home theaters and pro sound system setups, High-fidelity audio for homes and businesses, Acoustic design and indoor/outdoor audio installs.",
     image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1745564682/Home-sound_arazgv.jpg",
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/16_gipein.jpg",
   },
 ];
 
@@ -81,33 +84,36 @@ const ServiceSection = () => {
   //toggle video
 
   return (
-    <motion.section
-      variants={fadeIn("up", 0.4)}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      className="container pt-4 pb-6 px-4 sm:px-6 lg:px-8"
-    >
-      <div
+    <section className="container pt-4 pb-6 px-4 sm:px-6 lg:px-8">
+      <motion.div
+        variants={fadeIn("up", 0.4)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
         className="overflow-hidden py-24 text-gray-900  bg-gray-50 "
         id="services"
       >
         <div className="primary-container">
           <div className="max-w-[50rem] lg:mb-24 mb-12">
-            <h2 className="sm:text-6xl text-5xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="sm:text-4xl text-5xl md:text-5xl font-bold text-gray-900 mb-8">
               Our Services
             </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="flex flex-col  justify-between gap-16">
-              <div>
+              <motion.div
+                variants={fadeIn("up", 0.4)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
                 <p className="text-gray-600 text-lg md:text-xl text-justify">
                   Our services include cutting-edge security, fire & safety
                   solutions, home entertainment, and premium HD sound systems
                   designed for your safety, comfort, and enjoyment.
                 </p>
-              </div>
+              </motion.div>
 
               <div className="space-y-6">
                 {tabsData.map((tab) => (
@@ -124,23 +130,33 @@ const ServiceSection = () => {
                       )}
                     </div>
 
-                    <h3 className="text-xl font-semibold mb-2">{tab.title}</h3>
+                    <div className="bg-red-50 p-3 border-b border-gray-100 shadow-sm">
+                      <h3 className="text-xl font-semibold mb-2">
+                        {tab.title}
+                      </h3>
 
-                    <p
-                      className={`text-gray-500 transition-all duration-300 ${
-                        activeTab === tab.id
-                          ? "h-auto opacity-100"
-                          : "h-0 opacity-0 overflow-hidden"
-                      }`}
-                    >
-                      {tab.subtitle}
-                    </p>
+                      <p
+                        className={`text-gray-500 transition-all duration-300 ${
+                          activeTab === tab.id
+                            ? "h-auto opacity-100"
+                            : "h-0 opacity-0 overflow-hidden"
+                        }`}
+                      >
+                        {tab.subtitle}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="relative">
+            <motion.div
+              className="relative"
+              variants={fadeIn("left", 0.7)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
               <div className="max-w-[640px] mx-auto">
                 {tabsData.map((tab) => (
                   <div
@@ -148,15 +164,18 @@ const ServiceSection = () => {
                       activeTab === tab.id ? "opacity-100" : "opacity-0 hidden"
                     }`}
                   >
-                    <img src={tab.image} className="w-full rounded-lg"></img>
+                    <img
+                      src={tab.image}
+                      className="w-full rounded-lg object-contain"
+                    ></img>
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
 
