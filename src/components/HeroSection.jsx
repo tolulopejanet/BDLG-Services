@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="container mx-auto flex flex-col md:flex-row justify-between items-center pt-20 px-4 sm:px-6 lg:px-8"
+      className=" flex flex-col md:flex-row justify-between items-center pt-20 w-full bg-gray-50 pt-15 px-4 sm:px-6 lg:px-8"
     >
       {/* left col */}
 
