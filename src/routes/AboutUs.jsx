@@ -96,7 +96,7 @@ const AboutUs = () => {
       className=" w-full pt-15 px-4 sm:px-6 lg:px-8"
     >
       <section className="max-w-7xl mx-auto py-16 md:py-24">
-        <div className="primary-container">
+        <div className="">
           <div className="relative overflow-hidden">
             <div
               ref={sliderRef}
