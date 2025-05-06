@@ -93,7 +93,7 @@ const AboutUs = () => {
       whileInView="show"
       viewport={{ once: true }}
       id="home"
-      className=" pt-4 pb-6 px-4 sm:px-6 lg:px-8"
+      className=" w-full pt-15 px-4 sm:px-6 lg:px-8"
     >
       <section className="max-w-7xl mx-auto py-16 md:py-24">
         <div className="primary-container">
