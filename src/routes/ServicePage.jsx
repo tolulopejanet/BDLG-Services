@@ -111,7 +111,7 @@ const ServicePage = () => {
         <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="absolute inset-0 flex flex-col justify-center items-center">
-          <h2 className="text-white text-5xl tracking-[5px] text-center font-bold mb-4">
+          <h2 className="text-white text-3xl tracking-[5px] text-center font-bold mb-4 lg:text-7xl">
             OUR SERVICES
           </h2>
           <p className="text-white text-center px-4">
@@ -122,8 +122,8 @@ const ServicePage = () => {
       </div>
 
       <div className="bg-white-600">
-        <div className="primary-container pt-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="primary-container pt-12 sm:pb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-15">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -153,9 +153,8 @@ const ServicePage = () => {
                 src={gallery.image}
                 alt=""
                 width={500}
-                className={`w-full h-full absolute object-cover rounded-3xl transition-all duration-300 ${
-                  i === index ? "activeImage" : "inactiveImage"
-                } `}
+                className={`w-full h-full absolute object-cover rounded-3xl transition-all duration-300
+                 ${i === index ? "activeImage" : "inactiveImage"} `}
                 style={{
                   transform: `rotate(${
                     index === i ? 0 : getRandomNumber()
@@ -202,9 +201,8 @@ const ServicePage = () => {
                 whileInView="show"
                 viewport={{ once: true }}
                 key={i}
-                className={`text-center sm:text-xl text-gray-600 absolute transition-all duration-300 ${
-                  i === index ? "activeDesc delay-200" : "inactiveDesc"
-                } `}
+                className={`text-center sm:text-xl text-gray-600 absolute transition-all duration-300 
+                 ${i === index ? "activeDesc delay-200" : "inactiveDesc"} `}
               >
                 {gallery.desc}
               </motion.p>

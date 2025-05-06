@@ -18,7 +18,7 @@ const Footer = () => {
                 About Us
               </span>
             </div>
-            <p className="text-gray-400 mb-6 text-sm md-w-3/4">
+            <p className="text-gray-400 mb-6 text-sm md-w-3/4 text-justify">
               We have several years of development experience covering a wide
               variety of VTOL multi-rotor and fixed wing aircraft, we now offer
               some of the toughest and most durable industrial multi-rotor and

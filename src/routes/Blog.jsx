@@ -83,7 +83,7 @@ export default function BlogSection() {
         <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="absolute inset-0 flex flex-col justify-center items-center">
-          <h2 className="text-5xl lg:text-7xl leading-snug font-bold mb-5 text-white">
+          <h2 className=" lg:text-7xl leading-snug font-bold mb-5 text-white text-3xl">
             Welcome to Our Blog
           </h2>
           <p className="text-white text-center">
