@@ -12,9 +12,9 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/AboutUs", label: "About" },
     { href: "/Services", label: "Our Services" },
-    { href: "/Training", label: "Training" },
+    { href: "/AboutUs", label: "About Us" },
+    { href: "/Training", label: "Our Training" },
     { href: "/Blog", label: "Blog" },
   ];
 
@@ -29,7 +29,10 @@ const Navbar = () => {
       <div className="w-full container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 md:h-20 h-16">
         {/* logo */}
         <div className="flex items-center gap-1 cursor-pointer">
-          <img src={BDLG} alt="BDLG-logo" className="w-34 h-34" />
+          <img src={BDLG} alt="BDLG-logo" className="w-20 h-25 object-cover" />
+          <a className="-ml-5 text-gray-600 font-medium" href="/">
+            BDLG SERVICES LIMITED
+          </a>
         </div>
 
         {/* mobile menu button */}
@@ -46,15 +49,15 @@ const Navbar = () => {
 
         {/* desktop navitems */}
 
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link, index) => (
             <Link
               to={link.href}
               key={index}
               onClick={() => setActiveLink(link.href)}
-              className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all ${
+              className={`text-[16px] font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-red-600 after:transition-all ${
                 activeLink === link.href
-                  ? "text-blue-600 after:w-full"
+                  ? "text-grey-600 after:w-full"
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -64,7 +67,7 @@ const Navbar = () => {
         </div>
 
         {/* get in touch */}
-        <button className="hidden md:block bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100">
+        <button className="hidden md:block bg-red-600 text-white px-6 py-2.5 rounded-lg hover:bg-red-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-red-100">
           <Link to="/ContactUs">Contact Us</Link>
         </button>
       </div>

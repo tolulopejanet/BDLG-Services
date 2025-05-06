@@ -28,22 +28,24 @@ function Home() {
 function App() {
   return (
     <>
-      <main className="relative min-h-screen">
-        <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-full blur-[80px] -z-10"></div>
-        <div className="">
-          <Navbar />
+      <div className=" min-h-screen flex flex-col">
+        <main className="relative flex-grow">
+          <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-full blur-[80px] -z-10"></div>
+          <div className="">
+            <Navbar />
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/AboutUs" element={<AboutUs />} />
-            <Route path="/Services" element={<ServicePage />} />
-            <Route path="/Training" element={<Training />} />
-            <Route path="/Blog" element={<Blog />} />
-            <Route path="/ContactUs" element={<ContactUs />} />
-          </Routes>
-          <Footer />
-        </div>
-      </main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/AboutUs" element={<AboutUs />} />
+              <Route path="/Services" element={<ServicePage />} />
+              <Route path="/Training" element={<Training />} />
+              <Route path="/Blog" element={<Blog />} />
+              <Route path="/ContactUs" element={<ContactUs />} />
+            </Routes>
+          </div>
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

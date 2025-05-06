@@ -11,7 +11,7 @@ const services = [
   {
     id: "tab1",
     icon: <FiLayout className="w-8 h-8" />,
-    title: "Military Operation",
+    title: "Surveillance Operation",
     desc: "Our drones deliver excellent night vision and thermal imaging capability, able to capture images at over 2km.",
   },
   {
@@ -25,6 +25,35 @@ const services = [
     icon: <FiBarChart className="w-8 h-8" />,
     title: "Agriculture",
     desc: "Geo-information and mapping services, Crop scouting and agricultural aerial services and Agricultural Spraying.",
+  },
+];
+const services2 = [
+  {
+    id: "tab2",
+    icon: <FiLayout className="w-8 h-8" />,
+    title: "Security Services",
+    subtitle:
+      "Surveillance camera systems (CCTV), Access control systems, Alarm and intrusion detection systems, Security system installation and maintenance.",
+    image:
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/15_ei915i.jpg",
+  },
+  {
+    id: "tab3",
+    icon: <FiLayout className="w-8 h-8" />,
+    title: "Fire & Safety Equipment",
+    subtitle:
+      "Fire alarms and smoke detectors, Fire extinguishers and suppression systems, Emergency exit lighting and signage, Fire safety consultation and compliance.",
+    image:
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/14_h4bccc.jpg",
+  },
+  {
+    id: "tab4",
+    icon: <FiLayout className="w-8 h-8" />,
+    title: "Home Entertainment & HD Sound System Installation",
+    subtitle:
+      " Smart home automation with HD streaming and multi-room A/V, Custom home theaters and pro sound system setups, High-fidelity audio for homes and businesses, Acoustic design and indoor/outdoor audio installs.",
+    image:
+      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/16_gipein.jpg",
   },
 ];
 
@@ -71,17 +100,17 @@ const ServicePage = () => {
 
   return (
     <motion.section
-      variants={fadeIn("up", 0.8)}
+      variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="max-w-7xl mx-auto px-4 py-32 md:py-24"
+      className="w-full bg-gray-50 pt-15 px-4 sm:px-6 lg:px-8"
     >
       <div className="relative aspect-image overflow-hidden rounded-lg">
         <img src={ServImage} className="w-full h-[60vh] object-cover" />
         <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="absolute inset-0 p-8 flex flex-col justify-center items-center">
+        <div className="absolute inset-0 flex flex-col justify-center items-center">
           <h2 className="text-white text-5xl tracking-[5px] text-center font-bold mb-4">
             OUR SERVICES
           </h2>
@@ -93,7 +122,7 @@ const ServicePage = () => {
       </div>
 
       <div className="bg-white-600">
-        <div className="primary-container py-12">
+        <div className="primary-container pt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {services.map((service, index) => (
               <div
@@ -109,7 +138,7 @@ const ServicePage = () => {
         </div>
       </div>
 
-      <div className="relative py-16 ">
+      <div className="relative pb-16 ">
         <div className="flex gap-x-20 items-center justify-center lg:flex-row flex-col">
           <motion.div
             variants={fadeIn("right", 0.8)}
@@ -138,7 +167,7 @@ const ServicePage = () => {
 
           <motion.div className="relative sm:w-[400px] w-[320px] mt-22 lg:mt-5">
             <div
-              variants={fadeIn("right", 0.8)}
+              variants={fadeIn("right", 0.3)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
@@ -183,6 +212,23 @@ const ServicePage = () => {
           </motion.div>
         </div>
         {/* controls */}
+
+        <div className="bg-white-600">
+          <div className="primary-container py-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {services2.map((service, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col pt-8 bg-blue-20 p-3 border border-gray-100 shadow-sm rounded-lg cursor-pointer rounded-2xlhover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                  <p className="mb-4 flex-1">{service.subtitle}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </motion.section>
   );

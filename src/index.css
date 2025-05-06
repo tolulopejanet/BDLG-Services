@@ -3,6 +3,20 @@
 .animate-marquee {
   animation: marquee 25s linear infinite;
 }
+@keyframes slideFromLeft {
+  0% {
+    transform: translate(-100%, 100%); /* Start off-screen bottom-left */
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0); /* End at original position */
+    opacity: 1;
+  }
+}
+
+.animate-slide-from-left {
+  animation: slideFromLeft 1s ease-in-out;
+}
 
 @theme {
   --color-primary: #080806;

@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import Training1 from "../assets/training1.png";
 import Training2 from "../assets/training2.png";
 import Training3 from "../assets/training3.jpg";
+import Image17 from "../assets/17.jpg";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 
@@ -120,7 +122,7 @@ const FeaturesSection = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="py-24 text-gray-900"
+      className="py-5 text-gray-900"
       id="trainings"
     >
       <div className="primary-container">
@@ -180,16 +182,11 @@ const FeaturesSection = () => {
           <div>
             <div className="sticky top-24">
               <div className="aspect-square rounded-lg overflow-clip border border-white/20">
-                <video
-                  src={features[activeFeature].video}
-                  key={features[activeFeature].id}
-                  poster={features[activeFeature].poster}
+                <img
+                  src={Image17}
+                  alt=""
                   className="w-full h-full object-cover"
-                  muted
-                  playsInline
-                  loop
-                  autoPlay
-                ></video>
+                />
               </div>
             </div>
           </div>

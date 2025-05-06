@@ -7,9 +7,9 @@ import { fadeIn } from "../utils/motion";
 const PurposeSection = () => {
   return (
     <motion.section
-      className="w-full bg-gray-50 py-16 px-4 sm:px-6 md:px-8"
+      className="w-full bg-gray-50 pt-15 px-4 sm:px-6 lg:px-8"
       id="about"
-      variants={fadeIn("left", 1)}
+      variants={fadeIn("left", 0.3)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}

@@ -1,8 +1,13 @@
 // import { features } from "../assets/data";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import Drones from "../assets/drones.jpg";
-import HomeSound from "../assets/Home-sound.jpg";
+import Image1 from "../assets/DJI.jpg";
+import Image2 from "../assets/DJI2.jpg";
+import Image3 from "../assets/DJI3.jpg";
+import Image4 from "../assets/DJI4.jpg";
+import Image5 from "../assets/DJI5.jpg";
+// import Drones from "../assets/drones.jpg";
+// import HomeSound from "../assets/Home-sound.jpg";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import { useRef, useState } from "react";
 import { BiAnalyse, BiBadgeCheck } from "react-icons/bi";
@@ -11,20 +16,18 @@ const customerData = [
   {
     id: "techstart",
     logo: "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/66ec7ff7808fef2aeecfff1b_Outliant.svg",
-    image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746079134/DJI4_paqeqr.jpg",
+    image: Image1,
     poster:
       "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/66ec7faa88e83cdb12efc5b3_lattice-bg.webp",
     quote:
       "Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.",
-    author: "AERIAL PHOTOGRAPHY",
+    author: "AERIAL SURVEILLANCE",
     link: "/customers/techstart",
   },
   {
     id: "edutech",
     logo: "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/66ec7ff8ace31b63debbf4d9_Jasper.svg",
-    image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746079134/DJI5_ylkhsf.jpg",
+    image: Image2,
     poster:
       "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/66ec7faad1ba5dcf377b861c_outliant-bg.webp",
     quote:
@@ -35,8 +38,7 @@ const customerData = [
   {
     id: "devacademy",
     logo: "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/66ec7ff8a7ffdf748142d329_Fivetran.svg",
-    image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746079132/DJI2_cbay30.jpg",
+    image: Image4,
     poster:
       "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/66ec7faad1ba5dcf377b861c_outliant-bg.webp",
     quote:
@@ -47,8 +49,7 @@ const customerData = [
   {
     id: "edutech2",
     logo: "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/66ec7ff8ace31b63debbf4d9_Jasper.svg",
-    image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746079134/DJI5_ylkhsf.jpg",
+    image: Image5,
     poster:
       "https://cdn.prod.website-files.com/66e88746834b80507cdf7933/66ec7faad1ba5dcf377b861c_outliant-bg.webp",
     quote:
@@ -107,7 +108,7 @@ const AboutUs = () => {
                   <div className="relative aspect-image overflow-hidden rounded-lg">
                     <img
                       src={customer.image}
-                      className="w-full h-full object-cover"
+                      className="w-full h-[70vh] object-cover"
                     />
 
                     <div className="absolute inset-0 bg-black/40"></div>
@@ -153,7 +154,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 mx-auto px-4 py-16 md:py-24">
           <div className="md:w-1/2 w-full">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 md:w-4/5 sm:mt-10 ">
               We Stand Out

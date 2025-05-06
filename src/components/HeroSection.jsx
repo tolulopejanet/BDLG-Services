@@ -8,13 +8,13 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="container mx-auto flex flex-col md:flex-row justify-between items-center pt-44 pb-6 px-4 sm:px-6 lg:px-8"
+      className="container mx-auto flex flex-col md:flex-row justify-between items-center w-full bg-gray-50 pt-15 px-4 sm:px-6 lg:px-8"
     >
       {/* left col */}
 
       <motion.div
         className="w-full md:w-1/2 space-y-8"
-        variants={fadeIn("down", 0.6)}
+        variants={fadeIn("down", 0.3)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
@@ -31,7 +31,7 @@ const HeroSection = () => {
             1000, // pause at the end
           ]}
           wrapper="p"
-          cursor={true}
+          cursor={false}
           speed={50}
           style={{ whiteSpace: "pre-line" }}
           repeat={Infinity}
@@ -41,7 +41,7 @@ const HeroSection = () => {
 
       <motion.div
         className="w-full md:w-1/2 mt-16 md:mt-0 pl-0 md:pl-12"
-        variants={fadeIn("up", 0.7)}
+        variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}

@@ -2,7 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { BsPauseFill, BsPlayFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-// import Training1 from "../assets/training1.png";
+import Image13 from "../assets/13.jpg";
+import Image14 from "../assets/14.jpg";
+import Image15 from "../assets/15.jpg";
+import Image16 from "../assets/16.jpg";
+// import Image13 from "../assets/13.jpg";
 // import Training2 from "../assets/training2.png";
 // import Training3 from "../assets/training3.jpg";
 
@@ -12,32 +16,28 @@ const tabsData = [
     title: "UAV & Drone Services",
     subtitle:
       "Aerial photography and video capture, Drone mapping and 3D modeling, Monitoring for farms and job sites, Licensed pilots and safe operations.",
-    image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/13_hdcjas.jpg",
+    image: Image13,
   },
   {
     id: "tab2",
     title: "Security Services",
     subtitle:
       "Surveillance camera systems (CCTV), Access control systems, Alarm and intrusion detection systems, Security system installation and maintenance.",
-    image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/15_ei915i.jpg",
+    image: Image15,
   },
   {
     id: "tab3",
     title: "Fire & Safety Equipment",
     subtitle:
       "Fire alarms and smoke detectors, Fire extinguishers and suppression systems, Emergency exit lighting and signage, Fire safety consultation and compliance.",
-    image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/14_h4bccc.jpg",
+    image: Image14,
   },
   {
     id: "tab4",
     title: "Home Entertainment & HD Sound System Installation",
     subtitle:
       " Smart home automation with HD streaming and multi-room A/V, Custom home theaters and pro sound system setups, High-fidelity audio for homes and businesses, Acoustic design and indoor/outdoor audio installs.",
-    image:
-      "https://res.cloudinary.com/dtpz7bztd/image/upload/v1746049612/16_gipein.jpg",
+    image: Image16,
   },
 ];
 
@@ -157,16 +157,16 @@ const ServiceSection = () => {
               whileInView="show"
               viewport={{ once: true }}
             >
-              <div className="max-w-[640px] mx-auto">
+              <div className="max-w-[640px] mx-auto  h-[450px] flex items-center justify-center">
                 {tabsData.map((tab) => (
                   <div
-                    className={`transition-opacity duration-500 ${
+                    className={`transition-opacity duration-500 absolute ${
                       activeTab === tab.id ? "opacity-100" : "opacity-0 hidden"
                     }`}
                   >
                     <img
                       src={tab.image}
-                      className="w-full rounded-lg object-contain"
+                      className="h-[450px] rounded-lg object-cover w-auto"
                     ></img>
                   </div>
                 ))}
