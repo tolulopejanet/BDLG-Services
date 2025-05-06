@@ -114,7 +114,7 @@ const ServicePage = () => {
           <h2 className="text-white text-5xl tracking-[5px] text-center font-bold mb-4">
             OUR SERVICES
           </h2>
-          <p className="text-white text-center">
+          <p className="text-white text-center px-4">
             We support and provide UAVs drones services to various sectors in
             the country ranging from Military, Oil and Gas, Agriculture etc.
           </p>
@@ -213,13 +213,13 @@ const ServicePage = () => {
         </div>
         {/* controls */}
 
-        <div className="bg-white-600">
-          <div className="primary-container py-12">
+        <div className="bg-white-600 mt-10">
+          <div className="primary-container py-24">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
               {services2.map((service, index) => (
                 <div
                   key={index}
-                  className="flex flex-col pt-8 bg-blue-20 p-3 border border-gray-100 shadow-sm rounded-lg cursor-pointer rounded-2xlhover:shadow-xl transition-shadow duration-300"
+                  className="flex flex-col pt-8 bg-blue-20 p-3 border border-gray-100 shadow-sm rounded-lg cursor-pointer rounded-2xl hover-shadow-xl transition-shadow duration-300"
                 >
                   <div className="mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold mb-2">{service.title}</h3>

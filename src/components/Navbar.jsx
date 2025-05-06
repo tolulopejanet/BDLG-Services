@@ -77,7 +77,7 @@ const Navbar = () => {
         <div className="md:hidden bg-white border-t border-gray-100 py-4">
           <div className="container mx-auto px-4 space-y-3">
             {navLinks.map((link, index) => (
-              <a
+              <Link
                 onClick={() => {
                   setActiveLink(link.href);
                   setIsMenuOpen(false);
@@ -87,10 +87,10 @@ const Navbar = () => {
                     ? "text-blue-600"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
-                href={link.href}
+                to={link.href}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
 
             <button className="w-full bg-blue-600 text-white px-6 py-2 5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100">
