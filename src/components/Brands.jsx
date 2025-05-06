@@ -24,7 +24,7 @@ const Brands = () => {
 
   return (
     <div className="w-full overflow-hidden container mx-auto pt-20 px-4 sm:px-6 lg:px-8 flex sm:flex-row flex-col sm:items-center items-start">
-      <div className="w-[180px] shrink-0 px-5 text-gray-600 border-l-4 border-red-500 bg-white py-2 z-10 sm:text-base text-xl font-bold text-left">
+      <div className="w-[200px] shrink-0 px-5 text-gray-600 border-l-4 border-red-500 bg-white py-2 z-10 sm:text-base text-xl font-bold lg:text-left">
         Our Clients and <br /> Partners
       </div>
       <div className="flex animate-marquee whitespace-nowrap">

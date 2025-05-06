@@ -30,8 +30,11 @@ const Navbar = () => {
         {/* logo */}
         <div className="flex items-center gap-1 cursor-pointer">
           <img src={BDLG} alt="BDLG-logo" className="w-20 h-25 object-cover" />
-          <a className="-ml-5 text-gray-600 font-medium" href="/">
-            BDLG SERVICES LIMITED
+          <a
+            className="-ml-5 sm:text-[16px] lg:text-md tracking-[2px] text-gray-600 font-medium "
+            href="/"
+          >
+            BDLG SERVICES
           </a>
         </div>
 
@@ -67,14 +70,14 @@ const Navbar = () => {
         </div>
 
         {/* get in touch */}
-        <button className="hidden md:block bg-red-600 text-white px-6 py-2.5 rounded-lg hover:bg-red-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-red-100">
+        <button className="hidden md:block bg-red-500 text-white px-6 py-2.5 rounded-lg hover:bg-red-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-red-100">
           <Link to="/ContactUs">Contact Us</Link>
         </button>
       </div>
 
       {/* mobile menu items*/}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 py-4">
+        <div className="md:hidden bg-white border-t border-gray-100 py-24">
           <div className="container mx-auto px-4 space-y-3">
             {navLinks.map((link, index) => (
               <Link
@@ -84,7 +87,7 @@ const Navbar = () => {
                 }}
                 className={`block text-sm font-medium py-2 ${
                   activeLink === link.href
-                    ? "text-blue-600"
+                    ? "text-red-600"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
                 to={link.href}
@@ -93,7 +96,7 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <button className="w-full bg-blue-600 text-white px-6 py-2 5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100">
+            <button className="w-full bg-red-600 text-white px-6 py-2 5 rounded-lg hover:bg-red-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100">
               <Link to="/ContactUs">Contact Us</Link>
             </button>
           </div>

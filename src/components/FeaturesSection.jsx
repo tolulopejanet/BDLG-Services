@@ -128,12 +128,12 @@ const FeaturesSection = () => {
       <div className="primary-container">
         <div className="flex flex-col items-center justify-center">
           <div className="md:mb-12">
-            <h2 className="text-5xl sm:text-4xl font-bold mb-12">
-              Get Trained. Get Ahead.
+            <h2 className="sm:text-3xl text-4xl md:text-5xl font-bold text-gray-900">
+              Features
             </h2>
           </div>
           <div className="mb-12">
-            <p className="text-lg text-gray-600 mb-3 max-w-[65rem] text-center">
+            <p className="text-gray-600 text-lg md:text-xl text-center">
               Our comprehensive training programs combine in-person hands-on
               workshops, expert led online modules, and real-world
               scenario-based training to ensure participants gain in depth
@@ -171,8 +171,8 @@ const FeaturesSection = () => {
         </section>
 
         {/* image and content */}
-        <div className="mt-12">
-          <h2 className="text-5xl text-center sm:text-4xl font-bold mb-12">
+        <div className="my-12">
+          <h2 className="sm:text-3xl text-4xl md:text-5xl font-bold text-gray-900 text-center">
             Our Capabilities
           </h2>
         </div>

@@ -1,32 +1,5 @@
 //   purpose section
 
-export const purposes = [
-  {
-    icon: "🟣", // Replace with your actual icon component or image
-    title: "Expertise & Experience",
-    description:
-      "Our team comprises industry professionals with years of experience in security, fire safety, and entertainment solutions.",
-  },
-  {
-    icon: "🔴", // Replace with your actual icon component or image
-    title: "Quality Products",
-    description:
-      "We partner with trusted brands to provide state-of-the-art equipment.",
-  },
-  {
-    icon: "🔴", // Replace with your actual icon component or image
-    title: "Customized Solutions",
-    description:
-      "Every client has unique needs, and we tailor our services to match their specific requirements.",
-  },
-  {
-    icon: "🟣", // Replace with your actual icon component or image
-    title: "Reliable Support",
-    description:
-      "We offer ongoing maintenance and customer support to ensure system efficiency and longevity.",
-  },
-];
-
 //   features section
 
 const features = [

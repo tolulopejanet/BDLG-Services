@@ -10,7 +10,7 @@ import { footerLinks } from "../assets/data";
 const Footer = () => {
   return (
     <footer className="bg-gray-700">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-screen-xl mx-auto py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
           <div className="lg:col-span-4">
             <div className="flex gap-1 items-center">
@@ -58,9 +58,9 @@ const Footer = () => {
                 ([category, links], categoryIndex) => (
                   <div
                     key={category}
-                    className="text-lg font-medium mb-4 uppercase"
+                    className="text-sm font-medium mb-4 uppercase"
                   >
-                    <h3 className="text-lg font-medium mb-4 uppercase">
+                    <h3 className="text-sm font-medium mb-4 uppercase">
                       {category}
                     </h3>
                     <ul className="space-y-3">

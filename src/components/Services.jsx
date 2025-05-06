@@ -6,9 +6,6 @@ import Image13 from "../assets/13.jpg";
 import Image14 from "../assets/14.jpg";
 import Image15 from "../assets/15.jpg";
 import Image16 from "../assets/16.jpg";
-// import Image13 from "../assets/13.jpg";
-// import Training2 from "../assets/training2.png";
-// import Training3 from "../assets/training3.jpg";
 
 const tabsData = [
   {
@@ -90,12 +87,12 @@ const ServiceSection = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="overflow-hidden py-24 text-gray-900  bg-gray-50 "
+        className="overflow-hidden py-12 text-gray-900  bg-gray-50 "
         id="services"
       >
         <div className="primary-container">
-          <div className="max-w-[50rem] lg:mb-24 mb-12">
-            <h2 className="sm:text-4xl text-5xl md:text-5xl font-bold text-gray-900 mb-8">
+          <div className="max-w-[50rem] lg:mb-14 mb-5">
+            <h2 className="sm:text-3xl text-4xl md:text-5xl font-bold text-gray-900 ">
               Our Services
             </h2>
           </div>
