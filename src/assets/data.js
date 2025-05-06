@@ -154,7 +154,7 @@ export const footerLinks = {
     { name: "How it Works", href: "#" },
     { name: "Contact Us", href: "#" },
   ],
-  getHelp: [
+  Help: [
     { name: "Support Care", href: "#" },
     { name: "24h Service", href: "#" },
     { name: "Quick Chat", href: "#" },
