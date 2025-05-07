@@ -29,7 +29,7 @@ export default function Training() {
               viewport={{ once: true }}
               className="flex flex-col justify-center items-center gap-6 sm:pt-0"
             >
-              <h1 className="text-5xl font-bold">Our Training</h1>
+              <h1 className="lg:text-5xl font-bold text-4xl">Our Training</h1>
               <p className="text-gray-500 tracking-wide leading-5 w-4.5/5 text-center text-xl leading-relaxed ">
                 As our goal is to ensure that our customers reach their
                 objectives, we supply numerous services like drone training,
