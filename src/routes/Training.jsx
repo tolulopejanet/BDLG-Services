@@ -62,7 +62,7 @@ export default function Training() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-14 p-10"
+        className="grid grid-cols-1 md:grid-cols-2 gap-14"
       >
         {/* RPL Training Card */}
         <div className="bg-grey-50 cursor-pointer rounded-2xl p-6 shadow-2xl transition-shadow duration-300 text-gray-600 flex flex-col items-center overflow-hidden">
