@@ -30,7 +30,7 @@ export default function Training() {
               className="flex flex-col justify-center items-center gap-6 sm:pt-0"
             >
               <h1 className="text-5xl font-bold">Our Training</h1>
-              <p className="text-sm text-gray-500 tracking-wide leading-5 w-4/5 text-center lg:text-xl">
+              <p className="text-gray-500 tracking-wide leading-5 w-4/5 text-center lg:text-xl leading-relaxed ">
                 As our goal is to ensure that our customers reach their
                 objectives, we supply numerous services like drone training,
                 custom-made solutions, maintenance and aerial service provision.
@@ -40,13 +40,13 @@ export default function Training() {
                 <div className="space-y-5">
                   <div className="flex items-center gap-3">
                     <GrSecure className="text-2xl h-12 w-12 shadow-sm p-3 rounded-full bg-red-100" />
-                    <span className="text-gray-500">
+                    <span className="text-gray-500 lg:text-xl ">
                       (RPL) License Training - Remote Pilot License
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <GrSecure className="text-2xl h-12 w-12 shadow-sm p-3 rounded-full bg-red-100" />
-                    <span className="text-gray-500">
+                    <span className="text-gray-500 lg:text-xl">
                       Recreational Training – for Kids and drone enthusiasts
                     </span>
                   </div>

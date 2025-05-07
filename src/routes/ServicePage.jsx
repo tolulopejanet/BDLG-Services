@@ -107,7 +107,10 @@ const ServicePage = () => {
       className="w-full bg-gray-50 pt-15 px-4 sm:px-6 lg:px-8"
     >
       <div className="relative aspect-image overflow-hidden rounded-lg">
-        <img src={ServImage} className="w-full h-[60vh] object-cover" />
+        <img
+          src={ServImage}
+          className="w-full lg:h-[70vh] object-cover h-[50vh]"
+        />
         <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="absolute inset-0 flex flex-col justify-center items-center">

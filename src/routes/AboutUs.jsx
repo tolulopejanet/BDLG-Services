@@ -93,7 +93,7 @@ const AboutUs = () => {
       whileInView="show"
       viewport={{ once: true }}
       id="home"
-      className=" w-full pt-15 px-4 sm:px-6 lg:px-8"
+      className=" w-full px-4 sm:px-6 lg:px-8"
     >
       <section className="max-w-7xl mx-auto py-16 md:py-24">
         <div className="">
@@ -108,7 +108,7 @@ const AboutUs = () => {
                   <div className="relative aspect-image overflow-hidden rounded-lg">
                     <img
                       src={customer.image}
-                      className="w-full h-[70vh] object-cover"
+                      className="w-full lg:h-[70vh] object-cover h-[50vh]"
                     />
 
                     <div className="absolute inset-0 bg-black/40"></div>
@@ -156,7 +156,7 @@ const AboutUs = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 mx-auto px-4 py-16 md:py-24">
           <div className="md:w-1/2 w-full">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 md:w-4/5 sm:mt-10 ">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 md:w-4/5 -mt-5 ">
               We Stand Out
             </h2>
             <p className="text-gray-600 text-lg mb-4 md:w-4/5 ">

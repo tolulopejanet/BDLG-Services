@@ -139,6 +139,6 @@ export const footerLinks = {
   ],
   contact: [
     { name: "WhatsApp", href: "#" },
-    { name: "Support 24", href: "#" },
+    { name: "Support 24/7", href: "#" },
   ],
 };
