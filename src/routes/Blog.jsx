@@ -76,24 +76,27 @@ export default function BlogSection() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="w-full bg-gray-50 pt-15 px-4 sm:px-6 lg:px-8"
+      className="w-full bg-gray-50 pt-15 px-4 sm:px-6 lg:px-8 py-16 md:py-24"
     >
       <div className="relative aspect-image overflow-hidden rounded-lg">
-        <img src={ServImage} className="w-full h-[60vh] object-cover" />
+        <img
+          src={ServImage}
+          className="w-full lg:h-[70vh] h-[50vh] object-cover"
+        />
         <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="absolute inset-0 flex flex-col justify-center items-center">
           <h2 className=" lg:text-7xl leading-snug font-bold mb-5 text-white text-3xl">
             Welcome to Our Blog
           </h2>
-          <p className="text-white text-center">
+          <p className="text-white text-center px-4">
             We offer everything you need to get started from helpful tips and
             tutorials
           </p>
         </div>
       </div>
 
-      <div className="p-6 bg-gray-100 min-h-screen">
+      <div className="py-6 bg-gray-100 min-h-screen">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {blogs.map((blog, index) => (
             <div
