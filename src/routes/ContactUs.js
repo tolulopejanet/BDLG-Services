@@ -5,9 +5,11 @@ import Lottie from "lottie-react";
 import contact from "../assets/contact.json";
 
 const ContactUs = () => {
+  const [successMessage, setSuccessMessage] = useState("");
   const handleSubmit = (e)=>{
     e.preventDefault();
-    alert("Message Sent!");
+    setSuccessMessage("Your message has been sent successfully!");
+    setTimeout(()=> setSuccessMessage(""), 5000);
   };
   return (
     <div className="py-32 px-12 mb-16 mx-auto max-w-7xl">
@@ -33,6 +35,12 @@ const ContactUs = () => {
           className="w-full md:w-1/2 bg:gray-100 rounded-lg border border-red-300 shadow-lg shadow-blue-500 p-10"
         >
           <h1 className="text-4xl font-bold mb-7 text-center">Contact Us</h1>
+            {
+    successMessage && (
+      <div className="mb-4 text-green-700 bg-green-100p-3 rounded text-center">
+      {successMessage}
+      </div>
+  }
           <div className="mb-4">
             <label
               htmlFor="name"
@@ -74,6 +82,7 @@ const ContactUs = () => {
               className="mt-1 p-2 block w-full rounded-md border-gray-400 shadow-sm focus:border-indigo-300 focus:ring-indigo-200 focus:ring-opacity-50"
             />
           </div>
+  
           <button className="bg-red-800 px-3 py-2 rounded-xl text-white">
             Send Message
           </button>
