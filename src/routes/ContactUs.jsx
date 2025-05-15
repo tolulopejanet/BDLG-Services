@@ -5,6 +5,9 @@ import Lottie from "lottie-react";
 import contact from "../assets/contact.json";
 
 const ContactUs = () => {
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    alert("Message Sent!")
   return (
     <div className="py-32 px-12 mb-16 mx-auto max-w-7xl">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
@@ -25,7 +28,7 @@ const ContactUs = () => {
           />
         </div>
         <form
-          action=""
+          onSubmit={handleSubmit}
           className="w-full md:w-1/2 bg:gray-100 rounded-lg border border-red-300 shadow-lg shadow-blue-500 p-10"
         >
           <h1 className="text-4xl font-bold mb-7 text-center">Contact Us</h1>
