@@ -7,7 +7,8 @@ import contact from "../assets/contact.json";
 const ContactUs = () => {
   const handleSubmit = (e)=>{
     e.preventDefault();
-    alert("Message Sent!")}
+    alert("Message Sent!");
+  };
   return (
     <div className="py-32 px-12 mb-16 mx-auto max-w-7xl">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
