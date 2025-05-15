@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
@@ -25,30 +26,30 @@ const Footer = () => {
               fixed wing UAV solutions in the world.
             </p>
             <div className="flex gap-4">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-gray-100 transition-all duration-200"
               >
                 <FaFacebookF className="size-5" />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/"
                 className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-gray-100 transition-all duration-200"
               >
                 <FaTwitter className="size-5" />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/"
                 className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-gray-100 transition-all duration-200"
               >
                 <FaInstagram className="size-5" />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/"
                 className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-800 hover:text-gray-100 transition-all duration-200"
               >
                 <FaLinkedin className="size-5" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -69,7 +70,7 @@ const Footer = () => {
                           className="text-gray-400 hover:text-gray-900 text-sm"
                           key={index}
                         >
-                          <a href="#">{link.name}</a>
+                          <Link to="/">{link.name}</Link>
                         </li>
                       ))}
                     </ul>
