@@ -30,12 +30,12 @@ const Navbar = () => {
         {/* logo */}
         <div className="flex items-center gap-1 cursor-pointer">
           <img src={BDLG} alt="BDLG-logo" className="w-20 h-25 object-cover" />
-          <a
+          <Link
             className="-ml-5 sm:text-[16px] lg:text-md tracking-[2px] text-gray-600 font-medium "
-            href="/"
+            to="/"
           >
             BDLG SERVICES
-          </a>
+          </Link>
         </div>
 
         {/* mobile menu button */}
