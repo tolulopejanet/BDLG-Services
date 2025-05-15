@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
