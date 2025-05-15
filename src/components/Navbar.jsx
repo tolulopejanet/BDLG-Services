@@ -97,7 +97,9 @@ const Navbar = () => {
             ))}
 
             <button className="w-full bg-red-600 text-white px-6 py-2 5 rounded-lg hover:bg-red-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100">
-              <Link to="/ContactUs">Contact Us</Link>
+              <Link to="/ContactUs" onClick={() => {
+                  setIsMenuOpen(false);
+                }}>Contact Us</Link>
             </button>
           </div>
         </div>
