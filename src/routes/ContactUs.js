@@ -39,7 +39,7 @@ const ContactUs = () => {
     successMessage && (
       <div className="mb-4 text-green-700 bg-green-100p-3 rounded text-center">
       {successMessage}
-      </div>
+      </div>)
   }
           <div className="mb-4">
             <label
