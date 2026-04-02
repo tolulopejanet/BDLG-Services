@@ -43,7 +43,7 @@ const ChooseYourPath = () => {
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900">Choose Your Path</h2>
         <div className="mt-2 mx-auto h-1 w-24 bg-blue-500 rounded-full" />
-        <p className="text-gray-600 text-sm mt-3">Hover over any card to see the subjects covered</p>
+        <p className="text-gray-600 text-sm mt-3">Select any path to see the subjects covered</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {specializations.map((item, i) => (

@@ -1,6 +1,6 @@
 const ProgramRequirements = () => {
   return (
-    <section className="primary-container py-10">
+    <section className="primary-container pb-10">
       <div className="mt-20 bg-white border border-gray-200 rounded-3xl shadow-lg p-10 max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold mb-6 text-center">
           Program Requirements
