@@ -10,7 +10,8 @@ import PurposeSection from "./components/PurposeSection";
 import FeaturesSection from "./components/FeaturesSection";
 import ContactUs from "./routes/ContactUs";
 import ServicePage from "./routes/ServicePage";
-import Training from "./routes/Training";
+// import Training from "./routes/Training";
+import CareerPage from "./routes/Career";
 import Blog from "./routes/Blog";
 
 function Home() {
@@ -40,7 +41,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Services" element={<ServicePage />} />
-          <Route path="/Training" element={<Training />} />
+          {/* <Route path="/Training" element={<Training />} /> */}
+          <Route path="/CareerPage" element={<CareerPage />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/ContactUs" element={<ContactUs />} />
         </Routes>
