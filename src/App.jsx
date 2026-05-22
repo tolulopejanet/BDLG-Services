@@ -1,56 +1,31 @@
-import "./App.css";
-import { Routes, Route } from "react-router";
-import Brands from "./components/Brands";
-import AboutUs from "./routes/AboutUs";
-import ServiceSection from "./components/Services";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import PurposeSection from "./components/PurposeSection";
-import FeaturesSection from "./components/FeaturesSection";
-import ContactUs from "./routes/ContactUs";
-import ServicePage from "./routes/ServicePage";
-// import Training from "./routes/Training";
-import CareerPage from "./routes/Career";
-import Blog from "./routes/Blog";
-
-function Home() {
-  return (
-    <>
-      <HeroSection />
-      <PurposeSection />
-      <Brands />
-      <ServiceSection />
-      <FeaturesSection />
-    </>
-  );
-}
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Home from './Home'; // your homepage component
+import ServicesPage from './pages/ServicePage';
+import ProductsPage from './pages/ProductPage';
+import AboutUsPage from './pages/AboutUs';
+import BlogPage from './pages/Blog';
+import PartnersPage from './pages/Partners';
+import HomePage from './components/HomePage';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="relative min-h-screen flex flex-col">
-      {/* Background blur effect */}
-      <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-gradient-to-r from-indigo-500/20 to-pink-500/20 rounded-full blur-[80px] -z-10"></div>
 
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Main content grows to fill space */}
-      <div className="flex-grow">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/Services" element={<ServicePage />} />
-          {/* <Route path="/Training" element={<Training />} /> */}
-          <Route path="/CareerPage" element={<CareerPage />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/ContactUs" element={<ContactUs />} />
-        </Routes>
-      </div>
-
-      {/* Footer sticks to the bottom */}
+    <>
+    <Navbar/>
+      <Routes>
+        
+        <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/aboutus" element={<AboutUsPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/partners" element={<PartnersPage />} />
+        {/* add more routes as needed */}
+      </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 

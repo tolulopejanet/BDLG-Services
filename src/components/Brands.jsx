@@ -9,7 +9,7 @@ import Sentera from "../assets/38-removebg-preview.png";
 import Avss from "../assets/37-removebg-preview.png";
 import Prowings from "../assets/36-removebg-preview.png";
 
-const Brands = () => {
+const Brands = () => {    
   const logos = [
     Delair,
     Dji,

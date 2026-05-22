@@ -1,59 +1,60 @@
 import React from "react";
-import heroImage from "../assets/BDLG.png";
-import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
+import backgroundVideo from "../assets/DroneVid.mp4";
 
 const HeroSection = () => {
   return (
-    <section
-      id="home"
-      className="container mx-auto flex flex-col md:flex-row justify-between items-center pt-20 pb-6 px-4 sm:px-6 lg:px-8"
-    >
-      {/* left col */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        src={backgroundVideo}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-[#030712]"></div>
+
+      <div className="absolute top-[20%] left-[15%] w-72 h-72 bg-blue-500/20 rounded-full blur-[120px]"></div>
 
       <motion.div
-        className="w-full md:w-1/2 space-y-8 pt-8"
-        variants={fadeIn("down", 0.3)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
+        initial={{opacity:0,y:50}}
+        animate={{opacity:1,y:0}}
+        transition={{duration:1}}
+        className="relative z-20 max-w-5xl text-center"
       >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight ">
-          We Deliver
-          <span className="text-red-400"> Top Quality Products</span> and
-          Professional Installation Services
+        <span className="px-5 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-lg text-sm">
+          Future of Aerial Intelligence
+        </span>
+
+        <h1 className="mt-8 text-5xl md:text-7xl font-black leading-tight">
+          Transforming Industries With
+          <span className="block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Smart Drone Technology
+          </span>
         </h1>
 
-        <TypeAnimation
-          sequence={[
-            ` Our goal is to provide innovative, high-performance solutions tailored to meet the needs of residential, commercial, and industrial clients.`,
-            1000, // pause at the end
-          ]}
-          wrapper="p"
-          cursor={false}
-          speed={50}
-          style={{ whiteSpace: "pre-line" }}
-          repeat={Infinity}
-          className="text-gray-600 text-lg md:text-xl max-w-xl"
-        />
-      </motion.div>
+        <p className="text-gray-300 mt-8 max-w-2xl mx-auto text-lg">
+          Advanced drone training, aerial surveillance and intelligent
+          solutions designed for the future.
+        </p>
 
-      <motion.div
-        className="w-full md:w-1/2 lg:mt-16 md:mt-0 sm:pl-0 lg:pl-12"
-        variants={fadeIn("up", 0.3)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
-        <div className="relative">
-          <img
-            src={heroImage}
-            alt="hero image"
-            className="rounded-lg relative z-10 hover:scale-[1.02] transition-transform duration-300"
-          />
+        <div className="mt-10 flex flex-wrap gap-4 justify-center">
+
+          <button className="px-8 py-4 rounded-xl bg-blue-600 hover:scale-105 transition">
+            Explore Programs
+          </button>
+
+          <button className="px-8 py-4 rounded-xl border border-white/20 bg-white/10 backdrop-blur-lg hover:bg-white/20 transition">
+            Get Started
+          </button>
+
         </div>
       </motion.div>
+
     </section>
   );
 };

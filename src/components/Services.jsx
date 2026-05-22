@@ -8,7 +8,7 @@ import Image15 from "../assets/15.jpg";
 import Image16 from "../assets/16.jpg";
 
 const tabsData = [
-  {
+  {   
     id: "tab1",
     title: "UAV & Drone Services",
     subtitle:
