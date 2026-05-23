@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import collaborationImage from "../assets/DJI.jpg";
+import collaborationImage from "../assets/partner.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },

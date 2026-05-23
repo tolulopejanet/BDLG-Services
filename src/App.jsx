@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 function App() {
   return (
 
-    <>
+    <div className="overflow-x-hidden">
     <Navbar/>
       <Routes>
         
@@ -25,7 +25,7 @@ function App() {
         {/* add more routes as needed */}
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -102,7 +102,7 @@ const ServicesPage = () => {
       </div>
 
       {/* AUDIENCE SECTION */}
-      <div className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-6">
+      <div className="max-w-6xl mx-auto px-6 p6-20 grid md:grid-cols-3 gap-6">
 
         {[
           { title: "Education", desc: "Training students & institutions" },
@@ -122,7 +122,7 @@ const ServicesPage = () => {
       </div>
 
       {/* PROGRAM PATHS SECTION (YOUR COMPONENT - UPGRADED) */}
-      <div className="max-w-6xl mx-auto px-6 pb-24">
+      <div className="max-w-6xl mx-auto px-6 py-14" id="choose-path">
 
         <div className="text-center mb-12">
           <h2 className="text-4xl font-black">

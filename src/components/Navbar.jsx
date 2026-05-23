@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import BDLG from "../assets/bdlg-icon.png";
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,14 +33,14 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       className={`
-        fixed top-0 left-0 w-full z-50 transition-all duration-300
+        fixed top-0 left-0 w-full z-100 transition-all duration-300
         ${scrolled
           ? "bg-[#0B0F1A]/95 backdrop-blur-xl shadow-lg"
           : "bg-transparent"}
       `}
     >
 
-      <div className="container mx-auto px-6 h-20 flex justify-between items-center">
+      <div className="container mx-auto px-6 h-20 flex justify-between items-center overflow-hidden">
 
         {/* LOGO */}
         <Link to="/" className="flex items-center gap-3">
@@ -91,59 +92,101 @@ const Navbar = () => {
 
         {/* MOBILE BUTTON */}
         <button
-          onClick={() => setMenuOpen(true)}
-          className="md:hidden text-white"
-        >
-          <HiMenu size={28} />
-        </button>
+  onClick={() => setMenuOpen(!menuOpen)}
+  className="
+    md:hidden
+    text-white
+    p-2
+    rounded-lg
+    border border-white/10
+    bg-white/5
+    backdrop-blur-sm
+    z-[60]
+  "
+>
+  {menuOpen ? (
+    <HiX size={28} />
+  ) : (
+    <HiMenu size={28} />
+  )}
+</button>
 
       </div>
 
       {/* MOBILE DRAWER */}
-      {menuOpen && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden">
+      <AnimatePresence>
+  {menuOpen && (
+    <>
+      {/* BACKDROP */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setMenuOpen(false)}
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden z-40"
+      />
 
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            className="absolute right-0 top-0 h-full w-[75%] bg-[#0B0F1A] p-6"
-          >
+      {/* SLIDE MENU */}
+      <motion.div
+        initial={{ x: "100%" }}
+        animate={{ x: 0 }}
+        exit={{ x: "100%" }}
+        transition={{ duration: 0.35 }}
+        className="
+          fixed
+          top-0
+          right-0
+          h-screen
+          w-[80%]
+          bg-[#0B0F1A]
+          border-l border-white/10
+          z-50
+          px-8
+          pt-28
+          md:hidden
+        "
+      >
+        <div className="space-y-8">
 
-            {/* CLOSE */}
-            <button
+          {navLinks.map((link, index) => (
+            <Link
+              key={index}
+              to={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-white mb-10"
+              className="
+                block
+                text-xl
+                text-gray-300
+                hover:text-blue-400
+                transition
+              "
             >
-              <HiX size={30} />
-            </button>
+              {link.label}
+            </Link>
+          ))}
 
-            <div className="space-y-6">
+          <Link
+            to="/ContactUs"
+            onClick={() => setMenuOpen(false)}
+            className="
+              block
+              text-center
+              bg-blue-600
+              py-4
+              rounded-xl
+              text-white
+              font-semibold
+              mt-10
+            "
+          >
+            Schedule Call
+          </Link>
 
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="block text-gray-300 text-lg"
-                >
-                  {link.label}
-                </Link>
-              ))}
-
-              <Link
-                to="/ContactUs"
-                onClick={() => setMenuOpen(false)}
-                className="block text-center bg-blue-600 py-3 rounded-xl"
-              >
-                Schedule Call
-              </Link>
-
-            </div>
-
-          </motion.div>
         </div>
-      )}
+      </motion.div>
+    </>
+  )}
+</AnimatePresence>
 
     </motion.nav>
   );

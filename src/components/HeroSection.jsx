@@ -1,10 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import backgroundVideo from "../assets/DroneVid.mp4";
+import ApplyModal from "./ApplyModal";
 
 const HeroSection = () => {
+  const [showApply,setShowApply]=useState(false);
+  const [isApplyOpen, setIsApplyOpen] = useState(false);
+  const navigate = useNavigate();
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-6 px-6">
 
       <video
         autoPlay
@@ -24,7 +31,7 @@ const HeroSection = () => {
         initial={{opacity:0,y:50}}
         animate={{opacity:1,y:0}}
         transition={{duration:1}}
-        className="relative z-20 max-w-5xl text-center"
+        className="relative z-20 max-w-5xl text-center mt-40"
       >
         <span className="px-5 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-lg text-sm">
           Future of Aerial Intelligence
@@ -44,17 +51,38 @@ const HeroSection = () => {
 
         <div className="mt-10 flex flex-wrap gap-4 justify-center">
 
-          <button className="px-8 py-4 rounded-xl bg-blue-600 hover:scale-105 transition">
+          <button 
+          onClick={()=> navigate("/services#choose-path")}
+        
+          className="px-8 py-4 rounded-xl bg-blue-600 cursor-pointer hover:scale-105 transition">
             Explore Programs
           </button>
 
-          <button className="px-8 py-4 rounded-xl border border-white/20 bg-white/10 backdrop-blur-lg hover:bg-white/20 transition">
-            Get Started
-          </button>
+       <button
+        onClick={() => setShowApply(true)}
+        className="
+        px-8
+        py-4
+        rounded-2xl
+        border border-white/20
+        bg-white/5
+        backdrop-blur-md
+        cursor-pointer
+        "
+        >
+          Get Started
+        </button>
 
         </div>
       </motion.div>
 
+      <ApplyModal
+    isOpen={showApply}
+    onClose={()=>setShowApply(false)}
+    onApply={() => {
+      setShowApply(false);
+    }}
+    />
     </section>
   );
 };
