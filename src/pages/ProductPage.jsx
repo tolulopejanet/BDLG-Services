@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import drone1 from "../assets/DJI.jpg";
-import drone2 from "../assets/DJI.jpg";
-import drone3 from "../assets/DJI.jpg";
-import drone4 from "../assets/DJI.jpg";
+import drone1 from "../assets/01.jpeg";
+import drone2 from "../assets/02.jpeg";
+import drone3 from "../assets/03.jpeg";
+import drone4 from "../assets/04.jpeg";
 
 const products = [
   {

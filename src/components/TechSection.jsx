@@ -1,7 +1,7 @@
 import React from "react";
-import Image17 from "../assets/17.jpg"; // Replace with your image
-import { motion } from "framer-motion";
+import Image17 from "../assets/17.jpg"; 
 import { fadeIn } from "../utils/motion";
+import { motion } from "framer-motion";
 
 const TechSection = () => {
   return (

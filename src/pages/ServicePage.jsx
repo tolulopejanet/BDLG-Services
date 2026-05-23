@@ -84,10 +84,11 @@ const ServicesPage = () => {
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-[#030712]" />
 
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center px-6 max-w-3xl"
+          className="text-center px-6 max-w-3xl relative"
         >
           <h1 className="text-5xl md:text-6xl font-black">
             Who We Serve
@@ -175,57 +176,10 @@ const ServicesPage = () => {
 
       </div>
 
-      {/* REQUIREMENT */}
-      {/* PROGRAM PATHS SECTION */}
-      <div className="max-w-6xl mx-auto px-6 pb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-black">Choose Your Path</h2>
-          <p className="text-gray-400 mt-3">
-            Select a specialization and explore what you will learn
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {specializations.map((item, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.03 }}
-              className="bg-white/[0.03] border border-white/10 rounded-3xl p-6"
-            >
-              <div className="text-3xl text-blue-500 mb-4">{item.icon}</div>
-
-              <h3 className="text-xl font-bold">{item.title}</h3>
-
-              <p className="text-gray-400 text-sm mt-2">{item.desc}</p>
-
-              <div className="mt-6 space-y-2">
-                {item.subjects.map((s, idx) => (
-                  <div key={idx} className="text-sm text-gray-300 flex gap-2">
-                    <span className="text-blue-500">✓</span>
-                    {s}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+      
 
       {/* 🔥 NEW: REQUIREMENTS SECTION */}
       <ProgramRequirements />
-
-      {/* CTA */}
-      <div className="bg-white/[0.02] border-t border-white/10 py-20 text-center">
-        <h2 className="text-3xl font-bold">Ready to Start Your Journey?</h2>
-
-        <p className="text-gray-400 mt-4">
-          Join our drone training programs and build real-world skills.
-        </p>
-
-        <button className="mt-8 px-8 py-3 bg-blue-600 rounded-xl hover:bg-blue-700 transition">
-          Apply Now
-        </button>
-      </div>
 
       {/* CTA */}
       <div className="bg-white/[0.02] border-t border-white/10 py-20 text-center">

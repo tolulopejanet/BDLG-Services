@@ -59,7 +59,7 @@ const Modal = ({ isOpen, onClose, title, content, videoId }) => {
                       className="w-full h-full"
                       src={`https://www.youtube.com/embed/${videoId}`}
                       title="YouTube video"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
                   </div>

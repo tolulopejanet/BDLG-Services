@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import teamPhoto from "../assets/DJI.jpg";
+import teamPhoto from "../assets/DJI5.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },

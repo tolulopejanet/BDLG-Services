@@ -11,7 +11,7 @@ const posts = [
       "Drones are evolving into intelligent systems powered by AI, changing how industries operate globally.",
     content:
       "Drones are evolving into intelligent systems powered by AI, changing how industries operate globally. They are now used in mapping, surveillance, logistics, and disaster response.",
-    videoId: "dQw4w9WgXcQ"
+    videoId: "U5aGqJ_stQQ?si=0SJE_UPDpRH36n3G"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const posts = [
       "Learn the fundamentals of flight control, safety rules, and beginner training steps.",
     content:
       "Learning to fly drones requires understanding controls, safety rules, and practice. Beginners should start with simulators before real flight.",
-    videoId: "dQw4w9WgXcQ"
+    videoId: "7s5TYFPP6Uw?si=SvbOo46k_9i0ArfG"
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const posts = [
       "Explore how drones are used in mapping, surveillance, farming, and emergency response.",
     content:
       "Drones are widely used across agriculture, security, mapping, and emergency response due to their efficiency and accuracy.",
-    videoId: "dQw4w9WgXcQ"
+    videoId: "br6EI37kU8Q?si=wZLpJdwhzWSDhKN1"
   }
 ];
 

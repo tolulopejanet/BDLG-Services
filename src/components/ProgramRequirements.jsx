@@ -7,10 +7,10 @@ const ProgramRequirements = () => {
         {/* TITLE */}
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Are You Ready to Join?
+            Basic Requirements
           </h2>
           <p className="text-gray-300 mt-3">
-            Before enrolling, ensure you meet the basic requirements below
+            Before enrolling, ensure you meet the requirements below
           </p>
         </div>
 
