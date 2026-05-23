@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 function App() {
   return (
 
-    <div className="overflow-x-hidden">
+    <div className="w-full min-h-screen overflow-hidden">
     <Navbar/>
       <Routes>
         

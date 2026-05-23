@@ -50,6 +50,7 @@ const BlogPage = () => {
   };
 
   return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
     <div className="bg-[#030712] text-white min-h-screen">
 
       {/* HERO */}
@@ -113,6 +114,7 @@ const BlogPage = () => {
         videoId={selectedPost?.videoId}
       />
 
+    </div>
     </div>
   );
 };

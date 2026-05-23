@@ -12,7 +12,7 @@ const ContactUs = () => {
     setTimeout(()=> setSuccessMessage(""), 5000);
   };
   return (
-    <div className="py-32 px-12 mb-16 mx-auto max-w-7xl">
+    <div className="py-32 px-12 mb-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="md:w-1/2 mb-8 ml-2 md:mb-0">
           <h1 className="text-3xl font-bold text-black text-center mb-3">

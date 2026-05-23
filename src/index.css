@@ -1,57 +1,9 @@
 @import "tailwindcss";
-
-.animate-marquee {
-  animation: marquee 25s linear infinite;
+*{
+  box-sizing: border-box;
+  outline: 1px solid red;
 }
-@keyframes slideFromLeft {
-  0% {
-    transform: translate(-100%, 100%); /* Start off-screen bottom-left */
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0); /* End at original position */
-    opacity: 1;
-  }
-}
-
-.animate-slide-from-left {
-  animation: slideFromLeft 1s ease-in-out;
-}
-
-@theme {
-  --color-primary: #080806;
-}
-
-.primary-container {
-  @apply container mx-auto px-4 sm:px-6 lg:px-8;
-}
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-.activeImage {
-  opacity: 1;
-  z-index: 1;
-}
-.inactiveImage {
-  opacity: 0.5;
-  z-index: -1;
-}
-.activeDesc {
-  opacity: 1;
-  visibility: visible;
-}
-.inactiveDesc {
-  opacity: 0;
-  visibility: hidden;
+html, body, #root{
+  overflow-x: hidden !important;
+  width: 100%;
 }

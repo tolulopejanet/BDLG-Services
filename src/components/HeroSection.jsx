@@ -11,17 +11,17 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-6 px-6">
-
+    <section className="relative min-h-screen w-full flex items-center justify-center  py-6 px-6">
+<div className="absolute inset-0 overflow-hidden">
       <video
         autoPlay
         muted
         loop
         playsInline
         src={backgroundVideo}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="w-full h-full object-cover"
       />
-
+</div>
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-[#030712]"></div>
 

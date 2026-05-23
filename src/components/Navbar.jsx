@@ -33,14 +33,14 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       className={`
-        fixed top-0 left-0 w-full z-100 transition-all duration-300
+        fixed top-0 left-0 w-full z-50 transition-all duration-300 overflow-x-hidden
         ${scrolled
           ? "bg-[#0B0F1A]/95 backdrop-blur-xl shadow-lg"
           : "bg-transparent"}
       `}
     >
 
-      <div className="container mx-auto px-6 h-20 flex justify-between items-center overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-20 flex justify-between items-center overflow-hidden">
 
         {/* LOGO */}
         <Link to="/" className="flex items-center gap-3">
@@ -92,101 +92,107 @@ const Navbar = () => {
 
         {/* MOBILE BUTTON */}
         <button
-  onClick={() => setMenuOpen(!menuOpen)}
-  className="
-    md:hidden
-    text-white
-    p-2
-    rounded-lg
-    border border-white/10
-    bg-white/5
-    backdrop-blur-sm
-    z-[60]
-  "
->
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="
+            md:hidden
+            text-white
+            p-2
+            rounded-lg
+            border border-white/10
+            bg-white/5
+            backdrop-blur-sm
+            z-[60]
+          "
+        >
   {menuOpen ? (
     <HiX size={28} />
   ) : (
     <HiMenu size={28} />
   )}
-</button>
-
-      </div>
+        </button>
 
       {/* MOBILE DRAWER */}
       <AnimatePresence>
   {menuOpen && (
     <>
-      {/* BACKDROP */}
+      {/* Backdrop */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={() => setMenuOpen(false)}
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden z-40"
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden overflow-hidden"
       />
 
-      {/* SLIDE MENU */}
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: 0 }}
-        exit={{ x: "100%" }}
-        transition={{ duration: 0.35 }}
-        className="
-          fixed
-          top-0
-          right-0
-          h-screen
-          w-[80%]
-          bg-[#0B0F1A]
-          border-l border-white/10
-          z-50
-          px-8
-          pt-28
-          md:hidden
-        "
-      >
-        <div className="space-y-8">
+      {/* Drawer wrapper */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-50 md:hidden">
 
-          {navLinks.map((link, index) => (
+        <motion.div
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "100%" }}
+          transition={{ duration: 0.35 }}
+          className="
+            fixed
+            top-0
+            right-0
+            h-screen
+            w-full
+            max-w-[320px]
+            bg-[#0B0F1A]
+            border-l border-white/10
+            z-50
+            px-8
+            pt-28
+            md:hidden 
+            overflow-y-auto
+          "
+        >
+          <div className="space-y-8">
+
+            {navLinks.map((link, index) => (
+              <Link
+                key={index}
+                to={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="
+                  block
+                  text-xl
+                  text-gray-300
+                  hover:text-blue-400
+                  transition
+                "
+              >
+                {link.label}
+              </Link>
+            ))}
+
             <Link
-              key={index}
-              to={link.href}
+              to="/ContactUs"
               onClick={() => setMenuOpen(false)}
               className="
                 block
-                text-xl
-                text-gray-300
-                hover:text-blue-400
-                transition
+                text-center
+                bg-blue-600
+                py-4
+                rounded-xl
+                text-white
+                font-semibold
+                mt-10
               "
             >
-              {link.label}
+              Schedule Call
             </Link>
-          ))}
 
-          <Link
-            to="/ContactUs"
-            onClick={() => setMenuOpen(false)}
-            className="
-              block
-              text-center
-              bg-blue-600
-              py-4
-              rounded-xl
-              text-white
-              font-semibold
-              mt-10
-            "
-          >
-            Schedule Call
-          </Link>
+          </div>
+        </motion.div>
 
-        </div>
-      </motion.div>
+      </div>
     </>
   )}
-</AnimatePresence>
+      </AnimatePresence>
+      </div>
+
 
     </motion.nav>
   );
