@@ -52,7 +52,7 @@ const HeroSection = () => {
         <div className="mt-10 flex flex-wrap gap-4 justify-center">
 
           <button 
-          onClick={()=> navigate("/services#choose-path")}
+          onClick={()=> navigate("/aboutus#choose-path")}
         
           className="px-8 py-4 rounded-xl bg-blue-600 cursor-pointer hover:scale-105 transition">
             Explore Programs

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import collaborationImage from "../assets/partner.jpg";
 
 const fadeUp = {
@@ -8,6 +9,7 @@ const fadeUp = {
 };
 
 const PartnersPage = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#030712] text-white">
 
@@ -72,7 +74,11 @@ const PartnersPage = () => {
           Let’s Build Together
         </h2>
 
-        <button className="mt-8 px-8 py-4 bg-blue-600 rounded-2xl hover:scale-105 transition">
+        <button
+          type="button"
+          onClick={() => navigate("/contactus?subject=Partner Inquiry")}
+          className="mt-8 px-8 py-4 bg-blue-600 rounded-2xl hover:scale-105 transition"
+        >
           Become a Partner
         </button>
       </div>

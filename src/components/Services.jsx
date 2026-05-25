@@ -81,7 +81,7 @@ const ServiceSection = () => {
   //toggle video
 
   return (
-    <section className="container pt-4 pb-6 px-4 sm:px-6 lg:px-8">
+    <section className="max-w-7xl pt-4 pb-6 px-4 sm:px-6 lg:px-8">
       <motion.div
         variants={fadeIn("up", 0.4)}
         initial="hidden"

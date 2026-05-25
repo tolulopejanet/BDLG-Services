@@ -40,12 +40,49 @@ export default function CareerPage() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="w-full bg-gray-50 text-gray-900"
+      className="w-full bg-[#030712] text-white py-20 px-4 sm:px-6 lg:px-12"
     >
       <CareerHero onApplyClick={openApplyForm} />
       <JuniorDroneClub />
       <TrainingStructure onApplyClick={openApplyForm} />
       <ProgramRequirements />
+
+      <section className="bg-[#070b14] py-24">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <p className="text-blue-400 uppercase tracking-[0.3em] text-sm">Partnership Network</p>
+          <h2 className="text-4xl font-black text-white mt-4">Join our career and partner ecosystem</h2>
+          <p className="text-gray-400 mt-4 max-w-3xl mx-auto leading-8">
+            Collaborate with institutions, enterprises, and mission-driven teams to build drone-ready operations, training pipelines, and innovation programs.
+          </p>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              "Access to UAV solutions",
+              "Joint training programs",
+              "Shared innovation",
+              "Research collaboration",
+              "Industry expertise",
+              "Technology exchange"
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-white/10 bg-white/5 p-8 text-left"
+              >
+                <p className="text-gray-200">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={openApplyForm}
+            className="mt-12 px-10 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 transition"
+          >
+            Apply to Join
+          </button>
+        </div>
+      </section>
+
       <ChooseYourPath />
       <CareerApplyForm 
         showApplyForm={showApplyForm}

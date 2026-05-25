@@ -11,7 +11,7 @@ const posts = [
       "Drones are evolving into intelligent systems powered by AI, changing how industries operate globally.",
     content:
       "Drones are evolving into intelligent systems powered by AI, changing how industries operate globally. They are now used in mapping, surveillance, logistics, and disaster response.",
-    videoId: "U5aGqJ_stQQ?si=0SJE_UPDpRH36n3G"
+    videoId: "U5aGqJ_stQQ"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const posts = [
       "Learn the fundamentals of flight control, safety rules, and beginner training steps.",
     content:
       "Learning to fly drones requires understanding controls, safety rules, and practice. Beginners should start with simulators before real flight.",
-    videoId: "7s5TYFPP6Uw?si=SvbOo46k_9i0ArfG"
+    videoId: "7s5TYFPP6Uw"
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const posts = [
       "Explore how drones are used in mapping, surveillance, farming, and emergency response.",
     content:
       "Drones are widely used across agriculture, security, mapping, and emergency response due to their efficiency and accuracy.",
-    videoId: "br6EI37kU8Q?si=wZLpJdwhzWSDhKN1"
+    videoId: "br6EI37kU8Q"
   }
 ];
 
@@ -50,15 +50,15 @@ const BlogPage = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-    <div className="bg-[#030712] text-white min-h-screen">
+    <div className="bg-[#020711] text-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
       {/* HERO */}
       <div className="px-6 pt-36 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-white/10 rounded-[40px] p-10 md:p-16"
+          className="bg-[#051018] border border-white/10 rounded-[40px] p-10 md:p-16"
         >
           <h1 className="text-5xl md:text-6xl font-black">
             Knowledge Hub
@@ -75,7 +75,7 @@ const BlogPage = () => {
         {/* BIG ARTICLE */}
         <motion.div
           onClick={() => handlePostClick(posts[0])}
-          className="lg:col-span-2 bg-white/[0.03] border border-white/10 rounded-3xl p-8 cursor-pointer hover:border-blue-500 transition"
+          className="lg:col-span-2 bg-[#051018] border border-white/10 rounded-3xl p-8 cursor-pointer hover:border-blue-500 transition"
         >
           <h2 className="text-3xl font-bold">{posts[0].title}</h2>
 
@@ -93,7 +93,7 @@ const BlogPage = () => {
               key={post.id}
               onClick={() => handlePostClick(post)}
               whileHover={{ x: 6 }}
-              className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 cursor-pointer hover:border-blue-500 transition"
+              className="bg-[#051018] border border-white/10 rounded-3xl p-6 cursor-pointer hover:border-blue-500 transition"
             >
               <h3 className="font-bold">{post.title}</h3>
               <p className="text-gray-400 text-sm mt-2">
@@ -114,7 +114,7 @@ const BlogPage = () => {
         videoId={selectedPost?.videoId}
       />
 
-    </div>
+      </div>
     </div>
   );
 };

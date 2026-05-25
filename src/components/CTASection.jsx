@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const CTASection = () => {
   return (
     
-    <section className=" py-20 px-6 bg-[#030712] overflow-hidden">
+    <section className="relative py-20 px-6 bg-[#030712] overflow-hidden">
        {/* <section className="py-32 px-6 bg-[#030712] overflow-hidden"> */}
 
 
@@ -24,13 +26,19 @@ const CTASection = () => {
 
         <div className="mt-12 flex justify-center gap-5 flex-wrap">
 
-          <button className="px-10 py-4 rounded-2xl bg-blue-600 hover:scale-105 transition">
+          <Link
+            to="/career"
+            className="px-10 py-4 rounded-2xl bg-blue-600 hover:scale-105 transition inline-flex items-center justify-center"
+          >
             Apply Now
-          </button>
+          </Link>
 
-          <button className="px-10 py-4 rounded-2xl border border-white/20 bg-white/5 backdrop-blur-lg">
+          <Link
+            to="/contactus"
+            className="px-10 py-4 rounded-2xl border border-white/20 bg-white/5 backdrop-blur-lg inline-flex items-center justify-center"
+          >
             Contact Us
-          </button>
+          </Link>
 
         </div>
 

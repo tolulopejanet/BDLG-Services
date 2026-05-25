@@ -18,7 +18,7 @@ return(
 
 <footer className="bg-[#0B0F1A] border-t border-white/5">
 
-<div className="container mx-auto px-6 py-20">
+<div className="max-w-7xl mx-auto px-6 py-20">
 
 <motion.div
 
@@ -66,29 +66,21 @@ advanced drone solutions.
 
 <div className="flex gap-4 mt-8">
 
-<div className="w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-gray-400 hover:text-white cursor-pointer">
+<a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-gray-400 hover:text-white transition">
+  <FaFacebookF />
+</a>
 
-<FaFacebookF/>
+<a href="https://www.twitter.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-gray-400 hover:text-white transition">
+  <FaTwitter />
+</a>
 
-</div>
+<a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-gray-400 hover:text-white transition">
+  <FaInstagram />
+</a>
 
-<div className="w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-gray-400 hover:text-white cursor-pointer">
-
-<FaTwitter/>
-
-</div>
-
-<div className="w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-gray-400 hover:text-white cursor-pointer">
-
-<FaInstagram/>
-
-</div>
-
-<div className="w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-gray-400 hover:text-white cursor-pointer">
-
-<FaLinkedin/>
-
-</div>
+<a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-[#111827] flex items-center justify-center text-gray-400 hover:text-white transition">
+  <FaLinkedin />
+</a>
 
 </div>
 
@@ -140,9 +132,21 @@ Company
 
 <ul className="space-y-4 text-gray-400">
 
-<li>About Us</li>
-<li>Careers</li>
-<li>Partners</li>
+<li>
+  <Link to="/aboutus" className="hover:text-white transition">
+    About Us
+  </Link>
+</li>
+<li>
+  <Link to="/career" className="hover:text-white transition">
+    Career & Partners
+  </Link>
+</li>
+<li>
+  <Link to="/services" className="hover:text-white transition">
+    Services
+  </Link>
+</li>
 
 </ul>
 
@@ -156,9 +160,21 @@ Resources
 
 <ul className="space-y-4 text-gray-400">
 
-<li>Knowledge Hub</li>
-<li>Support</li>
-<li>Contact</li>
+<li>
+  <Link to="/blog" className="hover:text-white transition">
+    Knowledge Hub
+  </Link>
+</li>
+<li>
+  <Link to="/contactus" className="hover:text-white transition">
+    Support
+  </Link>
+</li>
+<li>
+  <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white transition">
+    LinkedIn
+  </a>
+</li>
 
 </ul>
 

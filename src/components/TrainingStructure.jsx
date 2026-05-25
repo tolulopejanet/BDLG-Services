@@ -12,7 +12,7 @@ const TrainingStructure = ({ onApplyClick }) => {
   };
 
   return (
-    <section className="primary-container md:py-10">
+    <section className="px-4 sm:px-6 lg:px-12 py-10">
       <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
   
   <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white px-5 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl">
@@ -44,7 +44,7 @@ const TrainingStructure = ({ onApplyClick }) => {
       <div className="space-y-14">
 
         {/* STEP 1 */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold">
@@ -104,7 +104,7 @@ const TrainingStructure = ({ onApplyClick }) => {
         </div>
 
         {/* STEP 2 */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8">
           <div className="relative md:order-1 order-2">
             <img
               src={Actual}
@@ -164,7 +164,7 @@ const TrainingStructure = ({ onApplyClick }) => {
         </div>
 
         {/* STEP 3 */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-600 text-white font-bold">

@@ -30,7 +30,7 @@ return(
 
 <section className="py-32 px-6">
 
-<div className="container mx-auto">
+<div className="max-w-7xl mx-auto">
 
 <div className="text-center mb-16">
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import drone1 from "../assets/01.jpeg";
 import drone2 from "../assets/02.jpeg";
@@ -48,6 +49,7 @@ const products = [
 const categories = ["All", "Training", "Industrial", "Emergency"];
 
 const ProductsPage = () => {
+  const navigate = useNavigate();
   const [active, setActive] = useState("All");
   const [selected, setSelected] = useState(null);
 
@@ -89,7 +91,7 @@ const ProductsPage = () => {
       {/* GRID */}
       <motion.div
         layout
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8  mx-auto"
       >
         {filtered.map((item) => (
           <motion.div
@@ -179,7 +181,11 @@ const ProductsPage = () => {
             {selected.details}
           </p>
 
-          <button className="mt-8 px-6 py-3 bg-blue-600 rounded-xl hover:scale-105 transition">
+          <button
+            type="button"
+            onClick={() => navigate("/contactus?subject=Request Demo")}
+            className="mt-8 px-6 py-3 bg-blue-600 rounded-xl hover:scale-105 transition"
+          >
             Request Demo
           </button>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import heroImage from "../assets/DJI.jpg";
 import ProgramRequirements from "../components/ProgramRequirements";
 
@@ -70,6 +71,8 @@ const specializations = [
 ];
 
 const ServicesPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[#030712] text-white">
 
@@ -192,7 +195,10 @@ const ServicesPage = () => {
           Join our drone training programs and build real-world skills.
         </p>
 
-        <button className="mt-8 px-8 py-3 bg-blue-600 rounded-xl hover:bg-blue-700 transition">
+        <button
+          onClick={() => navigate("/career")}
+          className="mt-8 px-8 py-3 bg-blue-600 rounded-xl hover:bg-blue-700 transition"
+        >
           Apply Now
         </button>
 

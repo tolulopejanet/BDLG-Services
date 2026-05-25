@@ -2,6 +2,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HiX } from "react-icons/hi";
 
 const Modal = ({ isOpen, onClose, title, content, videoId }) => {
+  const cleanVideoId = videoId?.split("?")[0];
+  const videoUrl = `https://www.youtube.com/watch?v=${cleanVideoId}`;
+  const thumbnailUrl = `https://img.youtube.com/vi/${cleanVideoId}/hqdefault.jpg`;
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -48,21 +52,35 @@ const Modal = ({ isOpen, onClose, title, content, videoId }) => {
               </p>
 
               {/* VIDEO SECTION */}
-              {videoId && (
+              {cleanVideoId && (
                 <div className="mt-6">
                   <h3 className="text-lg font-semibold mb-3 text-blue-400">
                     Watch Related Video
                   </h3>
 
-                  <div className="aspect-video w-full rounded-2xl overflow-hidden border border-white/10">
-                    <iframe
-                      className="w-full h-full"
-                      src={`https://www.youtube.com/embed/${videoId}`}
-                      title="YouTube video"
-                      allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
+                  <a
+                    href={videoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group block overflow-hidden rounded-3xl border border-white/10"
+                  >
+                    <div className="relative aspect-video w-full bg-black">
+                      <img
+                        src={thumbnailUrl}
+                        alt="YouTube preview"
+                        className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/25" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-[#0B0F1A] shadow-2xl transition group-hover:scale-110">
+                          ▶
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 bg-[#08121E] text-sm text-gray-300">
+                      Click to open the video on YouTube.
+                    </div>
+                  </a>
                 </div>
               )}
 

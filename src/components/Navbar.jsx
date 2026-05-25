@@ -21,11 +21,11 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Who We Serve", href: "/services" },
+    { label: "About Us", href: "/aboutus" },
     { label: "Products", href: "/products" },
-    { label: "Partners", href: "/partners" },
-    { label: "Company", href: "/AboutUs" },
-    { label: "Resources", href: "/Blog" }
+    { label: "Career & Partners", href: "/career" },
+    { label: "Resources", href: "/blog" },
+    { label: "Contact", href: "/contact" }
   ];
 
   return (
@@ -33,7 +33,7 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       className={`
-        fixed top-0 left-0 w-full z-50 transition-all duration-300 overflow-x-hidden
+        fixed top-0 left-0 w-full z-50 transition-all duration-300
         ${scrolled
           ? "bg-[#0B0F1A]/95 backdrop-blur-xl shadow-lg"
           : "bg-transparent"}
@@ -63,7 +63,7 @@ const Navbar = () => {
                 key={link.href}
                 to={link.href}
                 className={`
-                  text-sm transition relative
+                  group text-sm transition relative
                   ${active ? "text-white" : "text-gray-400 hover:text-white"}
                 `}
               >
@@ -84,7 +84,7 @@ const Navbar = () => {
 
         {/* CTA */}
         <Link
-          to="/ContactUs"
+          to="/schedule"
           className="hidden md:block px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-xl transition"
         >
           Schedule Call
@@ -146,6 +146,7 @@ const Navbar = () => {
             pt-28
             md:hidden 
             overflow-y-auto
+            pointer-events-auto
           "
         >
           <div className="space-y-8">
@@ -168,7 +169,7 @@ const Navbar = () => {
             ))}
 
             <Link
-              to="/ContactUs"
+              to="/schedule"
               onClick={() => setMenuOpen(false)}
               className="
                 block
