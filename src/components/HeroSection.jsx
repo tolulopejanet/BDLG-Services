@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import backgroundVideo from "../assets/DroneVid.mp4";
+import backgroundVideo from "../assets/drone2.mp4";
 import ApplyModal from "./ApplyModal";
 
 const HeroSection = () => {

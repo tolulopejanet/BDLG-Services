@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import ServicesPage from './pages/ServicePage';
 import ProductsPage from './pages/ProductPage';
 import AboutUsPage from './pages/AboutUs';
-import BlogPage from './pages/Blog';
+// import BlogPage from './pages/Blog';
 import ContactUsPage from './pages/ContactUs';
 import ScheduleCallPage from './pages/ScheduleCall';
 import CareerPage from './pages/Career';
@@ -32,7 +32,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/aboutus" element={<AboutUsPage />} />
-        <Route path="/blog" element={<BlogPage />} />
+        {/* <Route path="/blog" element={<BlogPage />} /> */}
         <Route path="/schedule" element={<ScheduleCallPage />} />
         <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/contactus" element={<ContactUsPage />} />

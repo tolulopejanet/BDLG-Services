@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import heroImage from "../assets/DJI.jpg";
+import heroImage from "../assets/Drone-int.jpeg";
 import ProgramRequirements from "../components/ProgramRequirements";
 
 // icons

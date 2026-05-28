@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { BsPauseFill, BsPlayFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import Image13 from "../assets/13.jpg";
-import Image14 from "../assets/14.jpg";
-import Image15 from "../assets/15.jpg";
-import Image16 from "../assets/16.jpg";
+import Image13 from "../assets/Drone1.jpeg";
+import Image14 from "../assets/Drone2.jpeg";
+import Image15 from "../assets/Drone3.jpeg";
+import Image16 from "../assets/Drone4.jpeg";
 
 const tabsData = [
   {   

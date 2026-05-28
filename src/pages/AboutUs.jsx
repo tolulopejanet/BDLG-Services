@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import teamPhoto from "../assets/14.jpeg";
+import teamPhoto from "../assets/Survey.jpeg";
 import ProgramRequirements from "../components/ProgramRequirements";
 
 const fadeUp = {
