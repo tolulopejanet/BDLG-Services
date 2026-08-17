@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import backgroundVideo from "../assets/drone2.mp4";
+import backgroundVideo from "../assets/bgvid.mp4";
 import ApplyModal from "./ApplyModal";
 
 const HeroSection = () => {
@@ -37,7 +37,7 @@ const HeroSection = () => {
           Future of Aerial Intelligence
         </span>
 
-        <h1 className="mt-8 text-5xl md:text-7xl font-black leading-tight">
+        <h1 className="mt-8 text-4xl md:text-6xl font-black leading-tight">
           Transforming Industries With
           <span className="block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Smart Drone Technology
