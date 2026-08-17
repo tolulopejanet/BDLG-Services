@@ -151,7 +151,7 @@ const ContactUs = () => {
               type="submit"
               className="mt-8 inline-flex w-full items-center justify-center rounded-3xl bg-[#0D4C92] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#0A3D75]"
             >
-              Learn More
+              Submit
             </button>
           </form>
         </div>
