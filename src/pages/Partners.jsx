@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import collaborationImage from "../assets/partner.jpg";
+import { partners } from "../assets/data";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -46,27 +47,27 @@ const PartnersPage = () => {
         </p>
       </motion.div>
 
-      {/* BENEFITS */}
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 mb-24">
-
-        {[
-          "Access to UAV solutions",
-          "Joint training programs",
-          "Shared innovation",
-          "Research collaboration",
-          "Industry expertise",
-          "Technology exchange"
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            whileHover={{ y: -6 }}
-            className="bg-white/[0.03] border border-white/10 p-6 rounded-3xl"
-          >
-            {item}
-          </motion.div>
-        ))}
-
-      </div>
+      {/* PARTNERS */}
+      <section className="max-w-6xl mx-auto px-6 mb-24">
+        <h2 className="text-3xl font-black text-center mb-10">Our Partners</h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {partners.map((partner) => (
+            <div
+              key={partner.name}
+              className="bg-white/[0.03] border border-white/10 p-6 rounded-2xl flex items-center gap-5 text-gray-200"
+            >
+              <span className="w-16 h-16 shrink-0 rounded-2xl bg-white flex items-center justify-center p-2">
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  className="w-full h-full object-contain"
+                />
+              </span>
+              <span className="text-left font-semibold">{partner.name}</span>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* CTA */}
       <div className="text-center pb-28">

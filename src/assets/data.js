@@ -1,5 +1,23 @@
 //   purpose section
 
+import propelLogo from "./propel-aerial-services.jpeg";
+import djiLogo from "./DJI-LOGO.webp";
+import agipLogo from "./Agip.webp";
+import oandoLogo from "./oando.webp";
+import pinlLogo from "./PINL.webp";
+import nafilLogo from "./nafil.png";
+import riversStateLogo from "./rivers-state-government.webp";
+
+export const partners = [
+  { name: "Propel Aerial Services", logo: propelLogo },
+  { name: "DJI", logo: djiLogo },
+  { name: "AGIP", logo: agipLogo },
+  { name: "OANDO", logo: oandoLogo },
+  { name: "PINL", logo: pinlLogo },
+  { name: "NAFIL", logo: nafilLogo },
+  { name: "Government of Rivers State", logo: riversStateLogo },
+];
+
 //   features section
 
 const features = [
@@ -48,36 +66,6 @@ const features = [
     ],
   },
 ];
-
-//   services section
-// export const services = [
-//   {
-//     icon: <BsStack className="w-8 h-8 text-indigo-600" />,
-//     title: "Web Design",
-//     description: "One for all and all for one, Muskehounds are always ready.",
-//     link: "#learn-more",
-//   },
-//   {
-//     icon: <HiLightBulb className="w-8 h-8 text-amber-400" />,
-//     title: "Ad-Creatives",
-//     description: "Alphabet Village and the subline of her own road.",
-//     link: "#learn-more",
-//   },
-//   {
-//     icon: <FiSettings className="w-8 h-8 text-red-400" />,
-//     title: "Automation",
-//     description: "Little Blind Text should turn around and return.",
-//     link: "#learn-more",
-//   },
-//   {
-//     icon: <BiTime className="w-8 h-8 text-cyan-400" />,
-//     title: "Infographics",
-//     description: "Nothing the copy said could convince her.",
-//     link: "#learn-more",
-//   },
-// ];
-
-//   testimonials section
 
 export const testimonials = [
   {

@@ -7,6 +7,7 @@ import TrainingStructure from "../components/TrainingStructure";
 import ProgramRequirements from "../components/ProgramRequirements";
 import ChooseYourPath from "../components/ChooseYourPath";
 import CareerApplyForm from "../components/CareerApplyForm";
+import { partners } from "../assets/data";
 
 export default function CareerPage() {
   const [showApplyForm, setShowApplyForm] = useState(false);
@@ -55,20 +56,20 @@ export default function CareerPage() {
             Collaborate with institutions, enterprises, and mission-driven teams to build drone-ready operations, training pipelines, and innovation programs.
           </p>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[
-              "Access to UAV solutions",
-              "Joint training programs",
-              "Shared innovation",
-              "Research collaboration",
-              "Industry expertise",
-              "Technology exchange"
-            ].map((item, index) => (
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {partners.map((partner) => (
               <div
-                key={index}
-                className="rounded-3xl border border-white/10 bg-white/5 p-8 text-left"
+                key={partner.name}
+                className="rounded-2xl border border-white/10 bg-white/5 p-5 flex items-center gap-4 text-left text-gray-200"
               >
-                <p className="text-gray-200">{item}</p>
+                <span className="w-12 h-12 shrink-0 rounded-xl bg-white flex items-center justify-center p-1.5">
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    className="w-full h-full object-contain"
+                  />
+                </span>
+                <span className="font-semibold">{partner.name}</span>
               </div>
             ))}
           </div>
@@ -82,8 +83,7 @@ export default function CareerPage() {
           </button>
         </div>
       </section>
-
-      <ChooseYourPath />
+      
       <CareerApplyForm 
         showApplyForm={showApplyForm}
         formData={formData}

@@ -46,7 +46,7 @@ const ContactUs = () => {
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="rounded-3xl bg-white/5 border border-white/10 p-6">
                 <p className="text-sm uppercase tracking-[0.3em] text-gray-400">Phone</p>
-                <p className="mt-3 text-lg font-semibold text-white">0800 555 44 33</p>
+                <p className="mt-3 text-lg font-semibold text-white">+234 911 444 8021</p>
               </div>
               <div className="rounded-3xl bg-white/5 border border-white/10 p-6">
                 <p className="text-sm uppercase tracking-[0.3em] text-gray-400">Email</p>

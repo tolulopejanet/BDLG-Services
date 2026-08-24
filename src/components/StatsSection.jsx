@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const stats=[
 {num:910,label:"Successful Missions"},
 {num:600,label:"Deployments"},
-{num:82,label:"Efficiency %"}
+{num:100,label:"Efficiency %"}
 ]
 
 const StatsSection=()=>{

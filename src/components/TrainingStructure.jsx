@@ -13,7 +13,7 @@ const TrainingStructure = ({ onApplyClick }) => {
 
   return (
     <section className="px-4 sm:px-6 lg:px-12 py-10">
-      <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+      <div className="text-center max-w-4xl mx-auto mb-8 md:mb-12">
   
   <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white px-5 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl">
     
@@ -29,7 +29,23 @@ const TrainingStructure = ({ onApplyClick }) => {
     </div>
   </div>
 
-  <p className="mt-3 text-gray-700 text-sm sm:text-base">
+  <p className="mt-3 text-gray-300 text-sm sm:text-base">
+    A practical pathway from fundamentals to field-ready drone operations.
+  </p>
+  <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 text-left">
+    {[
+      ["6", "weeks"],
+      ["15", "students per specialization"],
+      ["3", "training stages"],
+      ["1", "portfolio-ready project"],
+    ].map(([value, label]) => (
+      <div key={label} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+        <p className="text-2xl font-black text-white">{value}</p>
+        <p className="text-xs text-gray-400 mt-1">{label}</p>
+      </div>
+    ))}
+  </div>
+  <p className="mt-5 text-gray-300 text-sm sm:text-base">
     Limited to <span className="font-semibold">15 students per specialization</span>.{" "}
     <button
       onClick={onApplyClick}
@@ -222,6 +238,22 @@ const TrainingStructure = ({ onApplyClick }) => {
             <div className="absolute inset-0 bg-purple-600/10 rounded-2xl" />
           </div>
         </div>
+      </div>
+
+      <div className="mt-14 rounded-3xl border border-blue-400/20 bg-blue-500/10 p-6 md:p-8">
+        <h3 className="text-2xl font-bold text-white">What you leave with</h3>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-sm text-gray-300">
+          <p>Flight safety and regulatory confidence</p>
+          <p>Mission planning and field execution skills</p>
+          <p>Evidence of practical project work</p>
+          <p>Career guidance for your next opportunity</p>
+        </div>
+        <button
+          onClick={onApplyClick}
+          className="mt-7 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700 transition"
+        >
+          Apply for the next cohort
+        </button>
       </div>
     </section>
   );

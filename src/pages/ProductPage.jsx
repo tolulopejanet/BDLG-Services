@@ -279,11 +279,12 @@ const ProductsPage = () => {
               hover:border-blue-500
               transition"
           >
-            <div className="h-56 overflow-hidden">
+            <div className="h-72 md:h-80 overflow-hidden bg-black/10">
               <motion.img
                 whileHover={{ scale: 1.1 }}
                 src={item.img}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
+                alt={item.title}
               />
             </div>
 
@@ -337,7 +338,7 @@ const ProductsPage = () => {
         {/* IMAGE */}
         <img
           src={selected.img}
-          className="w-full h-64 object-cover"
+          className="w-full h-80 object-contain bg-black/10"
           alt={selected.title}
         />
 
