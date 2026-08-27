@@ -51,7 +51,7 @@ const BlogPage = () => {
 
   return (
     <div className="bg-[#020711] text-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-6">
 
       {/* HERO */}
       <div className="px-6 pt-36 max-w-6xl mx-auto">

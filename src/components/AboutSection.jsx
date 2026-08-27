@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import AboutImage from "../assets/Drone9.jpeg";
+import AboutImage from "../assets/map-drone.jpg";
 import {
   FaShieldAlt,
   FaChartLine
@@ -186,7 +186,7 @@ const AboutSection = () => {
 
             <h1 className="text-4xl font-black text-blue-400">
 
-              15+
+              10+
 
             </h1>
 

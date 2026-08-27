@@ -29,7 +29,7 @@ const ContactUs = () => {
     setTimeout(() => setSuccessMessage(""), 5000);
   };
   return (
-    <div className="bg-[#030712] text-white py-24 px-4 sm:px-6 lg:px-12">
+    <div className="bg-[#030712] text-white py-24 px-6">
       <div className="max-w-7xl mx-auto space-y-12">
         
 

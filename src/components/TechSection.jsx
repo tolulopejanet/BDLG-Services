@@ -1,5 +1,5 @@
 import React from "react";
-import Image17 from "../assets/Drone8.jpeg"; 
+import Image17 from "../assets/o&g.png"; 
 import { fadeIn } from "../utils/motion";
 import { motion } from "framer-motion";
 

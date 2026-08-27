@@ -14,6 +14,16 @@ const audience = [
   { title: "Government", desc: "Supporting public safety, emergency response, and civic infrastructure missions." }
 ];
 
+const values = [
+  "Safety First",
+  "Regulatory Integrity",
+  "Precision",
+  "Client Partnership",
+  "Innovation",
+  "Respect",
+  "Excellence"
+];
+
 const specializations = [
   {
     title: "Photography & Cinematography",
@@ -52,7 +62,7 @@ const AboutUsPage = () => {
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-3xl px-4 pt-20">
+        <div className="relative z-10 mx-auto max-w-3xl pt-20">
           <h2 className="text-3xl font-bold mb-6 text-white">Our Story</h2>
 
           <p className="text-gray-300 leading-8 max-w-2xl mx-auto">
@@ -64,8 +74,9 @@ const AboutUsPage = () => {
         </div>
       </motion.div>
 
-      {/* MISSION / VISION SPLIT */}
-      <div className="max-w-6xl mx-auto md:pt-20 sm:pt-10 px-6 grid md:grid-cols-2 gap-8 mb-24">
+      {/* MISSION / VISION / VALUES */}
+      <div className="max-w-7xl mx-auto">
+      <div className="md:pt-20 sm:pt-10 px-6 grid md:grid-cols-3 gap-8 mb-24">
 
         <motion.div
           variants={fadeUp}
@@ -78,9 +89,10 @@ const AboutUsPage = () => {
           "
         >
           <h2 className="text-2xl font-bold text-blue-400">Our Mission</h2>
-          <p className="text-gray-300 mt-4">
-            To train and empower the next generation of drone pilots,
-            engineers, and innovators through hands-on learning and real-world exposure.
+          <p className="text-gray-300 mt-4 text-justify">
+            BDLG provides top-tier drone services in surveying, inspection, mapping, and
+            surveillance across West Africa. We deliver client-focused solutions built on
+            quality, safety, and sustainability to support economic and community development in Nigeria.
           </p>
         </motion.div>
 
@@ -95,16 +107,31 @@ const AboutUsPage = () => {
           "
         >
           <h2 className="text-2xl font-bold text-purple-400">Our Vision</h2>
-          <p className="text-gray-300 mt-4">
-            To build a world where aerial intelligence is accessible,
-            safe, and used to solve real human and industrial problems.
+          <p className="text-gray-300 mt-4 text-justify">
+            To become West Africa's leading provider of innovative drone solutions, advancing
+            technological excellence and sustainable development while setting global benchmarks
+            for quality, safety, and environmental responsibility.
           </p>
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          className="
+            bg-gradient-to-br from-cyan-600/10 to-cyan-600/5
+            border border-cyan-500/20
+            rounded-3xl p-10
+          "
+        >
+          <h2 className="text-2xl font-bold text-cyan-400">Our Values</h2>
+          <p className="text-gray-300 mt-4 leading-8 text-justify">{values.join(", ")}</p>
         </motion.div>
 
       </div>
 
       {/* WHO WE SERVE */}
-      <div className="max-w-6xl mx-auto px-6 py-20">
+      <div className="px-6 py-20">
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-[0.35em] text-blue-400">Who We Serve</p>
           <h2 className="text-4xl font-black mt-4">Serving learners, businesses, and government teams</h2>
@@ -130,45 +157,10 @@ const AboutUsPage = () => {
         </div>
       </div>
 
-      {/* CHOOSE YOUR PATH */}
-      <div className="max-w-6xl mx-auto px-6 py-20" id="choose-path">
-        <div className="text-center mb-12">
-          <p className="text-sm uppercase tracking-[0.35em] text-blue-400">Choose Your Path</p>
-          <h2 className="text-4xl font-black mt-4">Specialized drone programs</h2>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Pick the focus area that best matches your goals and grow with hands-on training.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {specializations.map((item, i) => (
-            <motion.div
-              key={i}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              transition={{ delay: i * 0.1 }}
-              className="bg-white/[0.03] border border-white/10 rounded-3xl p-8"
-            >
-              <h3 className="text-xl font-bold text-white">{item.title}</h3>
-              <p className="text-gray-400 mt-3">{item.desc}</p>
-              <div className="mt-6 space-y-3 text-sm text-gray-300">
-                {item.subjects.map((subject, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <span className="mt-1 text-blue-400">•</span>
-                    <span>{subject}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
       {/* IMPACT SECTION (NEW — THIS MAKES IT FEEL ALIVE) */}
       <div className="bg-white/[0.02] border-y border-white/10 py-24">
 
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+        <div className="px-6 grid md:grid-cols-3 gap-8 text-center">
 
           {[
             { number: "10+", label: "Years Experience" },
@@ -189,38 +181,6 @@ const AboutUsPage = () => {
           ))}
 
         </div>
-
-      </div>
-
-      {/* VALUES (VISUAL GRID, NOT LIST) */}
-      <div className="max-w-6xl mx-auto px-6 py-24">
-
-        <h2 className="text-4xl font-black text-center mb-12">
-          What We Stand For
-        </h2>
-
-        <div className="grid md:grid-cols-4 gap-6">
-
-          {["Safety", "Innovation", "Accessibility", "Collaboration"].map(
-            (val, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -8 }}
-                className="
-                  bg-white/[0.03]
-                  border border-white/10
-                  rounded-2xl
-                  p-6
-                  text-center
-                  hover:border-blue-500
-                  transition
-                "
-              >
-                {val}
-              </motion.div>
-            )
-          )}
-
         </div>
 
       </div>

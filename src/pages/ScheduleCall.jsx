@@ -33,7 +33,7 @@ const ScheduleCallPage = () => {
   };
 
   return (
-    <div className="bg-[#030712] text-white min-h-screen py-20 px-4 sm:px-6 lg:px-12">
+    <div className="bg-[#030712] text-white min-h-screen py-20 px-6">
       <div className="mx-auto max-w-5xl rounded-[32px] border border-white/10 bg-[#0B0F1A]/90 p-8 shadow-2xl shadow-black/20">
         <div className="mb-10 text-center">
           <p className="text-blue-400 uppercase tracking-[0.3em] text-sm">Schedule a Call</p>

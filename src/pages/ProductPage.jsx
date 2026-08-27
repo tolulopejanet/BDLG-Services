@@ -230,7 +230,7 @@ const ProductsPage = () => {
       : products.filter((p) => p.type === active);
 
   return (
-    <div className="bg-[#030712] text-white py-24 px-6">
+    <div className="bg-[#030712] text-white py-24 px-6 max-w-7xl mx-auto">
 
       {/* HEADER */}
       <div className="text-center max-w-3xl mx-auto mb-10">
