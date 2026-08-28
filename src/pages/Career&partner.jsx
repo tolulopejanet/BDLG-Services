@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import CareerHero from "../components/CareerHero";
 import JuniorDroneClub from "../components/JuniorDroneClub";
 import TrainingStructure from "../components/TrainingStructure";
-import ProgramRequirements from "../components/ProgramRequirements";
 import ChooseYourPath from "../components/ChooseYourPath";
 import CareerApplyForm from "../components/CareerApplyForm";
 import { partners } from "../assets/data";
 
 export default function CareerPage() {
-  const [showApplyForm, setShowApplyForm] = useState(false);
+  const [searchParams] = useSearchParams();
+  const [showApplyForm, setShowApplyForm] = useState(() => searchParams.get("apply") === "true");
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -46,7 +47,6 @@ export default function CareerPage() {
       <CareerHero onApplyClick={openApplyForm} />
       <JuniorDroneClub />
       <TrainingStructure onApplyClick={openApplyForm} />
-      <ProgramRequirements />
 
       <section className="bg-[#070b14] py-24 max-w-7xl mx-auto">
         <div className="max-w-6xl mx-auto px-6 text-center">
@@ -56,31 +56,30 @@ export default function CareerPage() {
             Collaborate with institutions, enterprises, and mission-driven teams to build drone-ready operations, training pipelines, and innovation programs.
           </p>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {partners.map((partner) => (
-              <div
-                key={partner.name}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5 flex items-center gap-4 text-left text-gray-200"
-              >
-                <span className="w-12 h-12 shrink-0 rounded-xl bg-white flex items-center justify-center p-1.5">
-                  <img
-                    src={partner.logo}
-                    alt={`${partner.name} logo`}
-                    className="w-full h-full object-contain"
-                  />
-                </span>
-                <span className="font-semibold">{partner.name}</span>
-              </div>
-            ))}
+          <div className="mt-10 overflow-hidden">
+            <div className="partner-carousel-track flex">
+              {[0, 1].map((groupIndex) => (
+                <div className="flex shrink-0 gap-4 pr-4" key={groupIndex}>
+                  {partners.map((partner) => (
+                    <div
+                      key={`${partner.name}-${groupIndex}`}
+                      className="flex w-24 shrink-0 items-center justify-center p-3 sm:w-28"
+                    >
+                      <span className="flex h-20 w-25 shrink-0 items-center justify-center rounded-xl bg-white p-1.5">
+                        <img
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="w-full h-full object-contain"
+                        />
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
 
-          <button
-            type="button"
-            onClick={openApplyForm}
-            className="mt-12 px-10 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 transition"
-          >
-            Apply to Join
-          </button>
+          
         </div>
       </section>
       

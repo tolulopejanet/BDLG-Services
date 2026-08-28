@@ -196,7 +196,7 @@ const ServicesPage = () => {
         </p>
 
         <button
-          onClick={() => navigate("/career")}
+          onClick={() => navigate("/career?apply=true")}
           className="mt-8 px-8 py-3 bg-blue-600 rounded-xl hover:bg-blue-700 transition"
         >
           Apply Now

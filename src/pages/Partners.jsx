@@ -50,22 +50,27 @@ const PartnersPage = () => {
       {/* PARTNERS */}
       <section className="max-w-6xl mx-auto px-6 mb-24">
         <h2 className="text-3xl font-black text-center mb-10">Our Partners</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {partners.map((partner) => (
-            <div
-              key={partner.name}
-              className="bg-white/[0.03] border border-white/10 p-6 rounded-2xl flex items-center gap-5 text-gray-200"
-            >
-              <span className="w-16 h-16 shrink-0 rounded-2xl bg-white flex items-center justify-center p-2">
-                <img
-                  src={partner.logo}
-                  alt={`${partner.name} logo`}
-                  className="w-full h-full object-contain"
-                />
-              </span>
-              <span className="text-left font-semibold">{partner.name}</span>
-            </div>
-          ))}
+        <div className="overflow-hidden">
+          <div className="partner-carousel-track flex">
+            {[0, 1].map((groupIndex) => (
+                <div className="flex shrink-0 gap-5 pr-5" key={groupIndex}>
+                {partners.map((partner) => (
+                  <div
+                    key={`${partner.name}-${groupIndex}`}
+                    className="flex w-24 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:w-28"
+                  >
+                    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white p-2">
+                      <img
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        className="w-full h-full object-contain"
+                      />
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

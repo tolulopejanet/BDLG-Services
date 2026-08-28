@@ -1,13 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { motion } from "framer-motion";
-import backgroundVideo from "../assets/bgvid.mp4";
-import ApplyModal from "./ApplyModal";
+import backgroundVideo from "../assets/hero (2).mp4";
 
 const HeroSection = () => {
-  const [showApply,setShowApply]=useState(false);
-  const [isApplyOpen, setIsApplyOpen] = useState(false);
   const navigate = useNavigate();
 
   return (
@@ -59,7 +55,7 @@ const HeroSection = () => {
           </button>
 
        <button
-        onClick={() => setShowApply(true)}
+        onClick={() => navigate("/career?apply=true")}
         className="
         px-8
         py-4
@@ -76,13 +72,6 @@ const HeroSection = () => {
         </div>
       </motion.div>
 
-      <ApplyModal
-    isOpen={showApply}
-    onClose={()=>setShowApply(false)}
-    onApply={() => {
-      setShowApply(false);
-    }}
-    />
     </section>
   );
 };

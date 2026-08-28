@@ -1,0 +1,27 @@
+button {
+	cursor: pointer;
+}
+
+@keyframes partner-carousel {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.partner-carousel-track {
+	animation: partner-carousel 28s linear infinite;
+	width: max-content;
+}
+
+.partner-carousel-track:hover {
+	animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.partner-carousel-track {
+		animation: none;
+	}
+}

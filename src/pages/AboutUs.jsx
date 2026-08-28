@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import teamPhoto from "../assets/Survey.jpeg";
+import teamPhoto from "../assets/story.jpg";
 import ProgramRequirements from "../components/ProgramRequirements";
 
 const fadeUp = {
@@ -9,9 +9,17 @@ const fadeUp = {
 };
 
 const audience = [
-  { title: "Education", desc: "Training students and institutions for the future of aerial intelligence." },
-  { title: "Industry", desc: "Helping businesses adopt drone programs for inspection, security, and operations." },
-  { title: "Government", desc: "Supporting public safety, emergency response, and civic infrastructure missions." }
+  { title: "Power", desc: "Supporting power generation, transmission, and distribution teams with aerial intelligence." },
+  { title: "Geospatial & Remote Sensing", desc: "Delivering accurate mapping, surveying, and remote-sensing data for better decisions." },
+  { title: "Media & Entertainment", desc: "Capturing compelling aerial imagery for film, media, events, and creative production." },
+  { title: "Oil & Gas", desc: "Improving asset inspection, monitoring, and operational visibility across oil and gas sites." },
+  { title: "Defence & Security", desc: "Enabling surveillance, reconnaissance, perimeter monitoring, and emergency response." },
+  { title: "Agriculture", desc: "Helping agricultural teams monitor crops, assess land, and improve field operations." },
+  { title: "Construction & Infrastructure", desc: "Tracking project progress and inspecting infrastructure with safer aerial workflows." },
+  { title: "Telecom", desc: "Supporting tower inspection, network planning, and telecommunications asset management." },
+  { title: "Mining", desc: "Providing site mapping, stockpile measurement, and safer inspection for mining operations." },
+  { title: "Maritime", desc: "Supporting coastal, vessel, port, and offshore monitoring with reliable aerial data." },
+  { title: "Remote Sensing", desc: "Turning aerial imagery and sensor data into actionable environmental and operational insight." }
 ];
 
 const values = [
@@ -62,10 +70,10 @@ const AboutUsPage = () => {
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-3xl pt-20">
+        <div className="relative z-10 mx-auto max-w-5xl pt-20">
           <h2 className="text-3xl font-bold mb-6 text-white">Our Story</h2>
 
-          <p className="text-gray-300 leading-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 leading-8 max-w-4xl mx-auto">
             BDLG Services Limited started with a simple idea which is to make aerospace and drone
             technology accessible to everyone, not just experts. Over time, we’ve trained
             students, supported institutions, and built systems that help organizations
@@ -133,11 +141,7 @@ const AboutUsPage = () => {
       {/* WHO WE SERVE */}
       <div className="px-6 py-20">
         <div className="text-center mb-12">
-          <p className="text-sm uppercase tracking-[0.35em] text-blue-400">Who We Serve</p>
-          <h2 className="text-4xl font-black mt-4">Serving learners, businesses, and government teams</h2>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Our programs are built for anyone who wants to adopt drone technology safely and effectively.
-          </p>
+          <p className="text-sm uppercase tracking-[0.35em] text-blue-400">Our Services</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">

@@ -6,7 +6,8 @@ import AboutUsPage from './pages/AboutUs';
 // import BlogPage from './pages/Blog';
 import ContactUsPage from './pages/ContactUs';
 import ScheduleCallPage from './pages/ScheduleCall';
-import CareerPage from './pages/Career';
+import CareerPage from './pages/Career&partner';
+import TrainingStructure from './components/TrainingStructure';
 import HomePage from './components/HomePage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -37,6 +38,7 @@ function App() {
         <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/contactus" element={<ContactUsPage />} />
         <Route path="/career" element={<CareerPage />} />
+        <Route path="/training" element={<TrainingStructure onApplyClick={() => window.location.assign('/career?apply=true')} />} />
        
       </Routes>
       <Footer />

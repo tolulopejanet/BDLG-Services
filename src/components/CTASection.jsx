@@ -27,7 +27,7 @@ const CTASection = () => {
         <div className="mt-12 flex justify-center gap-5 flex-wrap">
 
           <Link
-            to="/career"
+            to="/career?apply=true"
             className="px-10 py-4 rounded-2xl bg-blue-600 hover:scale-105 transition inline-flex items-center justify-center"
           >
             Apply Now

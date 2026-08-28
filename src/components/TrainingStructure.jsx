@@ -1,261 +1,79 @@
 import { useState } from "react";
-import Online from "../assets/online.webp";
+import { FaArrowRight, FaCheck, FaChevronDown } from "react-icons/fa";
+import Online from "../assets/train.png";
 import Actual from "../assets/actual.avif";
-import Launch from "../assets/launch.webp";
-import { FaCalendarAlt } from "react-icons/fa";
+
+const courses = [
+  { code: "01", title: "Basic RPAS Certificate", detail: "Build a confident foundation in drone safety, systems, and flight principles." },
+  { code: "02", title: "VLOS Remote Pilot Licence", detail: "Train for supervised and commercial operations within visual line of sight." },
+  { code: "03", title: "BVLOS Advanced Operations", detail: "Move into advanced mission planning and beyond visual line of sight operations." },
+];
+
+const audiences = [
+  ["Drone enthusiasts & professionals", "Turn your interest in aerial technology into a practical, certified career."],
+  ["Engineering & tech students", "Gain hands-on experience and skills that extend far beyond the classroom."],
+  ["Defense & security agencies", "Add aerial intelligence, surveillance, and reconnaissance to your capability."],
+  ["Oil & gas companies", "Inspect infrastructure and monitor assets with less risk and better visibility."],
+];
+
+const journey = [
+  ["01", "Enroll", "Start your journey toward becoming a certified drone pilot."],
+  ["02", "Train", "Learn with instructors who bring real mission experience to every lesson."],
+  ["03", "Simulate", "Practice flight control and decision-making in realistic environments."],
+  ["04", "Fly", "Master real-world conditions through supervised field operations."],
+  ["05", "Certify", "Complete your assessment and earn the confidence to fly professionally."],
+];
+
+const faqs = [
+  ["What courses do you offer?", "We offer Basic, Visual Line of Sight (VLOS), and Beyond Visual Line of Sight (BVLOS) drone pilot training."],
+  ["Do I need to own a drone?", "No. Drones, equipment, and simulators are provided during practical training."],
+  ["Can beginners apply?", "Yes. Our curriculum is designed to take you from beginner to advanced, even without an aviation background."],
+  ["Where does training take place?", "Online lessons are paired with supervised field training at our Lekki facility."],
+];
 
 const TrainingStructure = ({ onApplyClick }) => {
-   const [openStep, setOpenStep] = useState(null);
-
-  const toggleStep = (step) => {
-    setOpenStep(openStep === step ? null : step);
-  };
+  const [openFaq, setOpenFaq] = useState(null);
 
   return (
-    <section className="px-4 sm:px-6 lg:px-12 py-10">
-      <div className="text-center max-w-4xl mx-auto mb-8 md:mb-12">
-  
-  <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white px-5 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl">
-    
-
-    {/* Text */}
-    <div className="text-center">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold leading-tight">
-        6-Week Training Structure
-      </h2>
-      <p className="text-xs sm:text-sm opacity-90">
-        Next Cohort: <span className="font-bold">1st May 2026</span>
-      </p>
-    </div>
-  </div>
-
-  <p className="mt-3 text-gray-300 text-sm sm:text-base">
-    A practical pathway from fundamentals to field-ready drone operations.
-  </p>
-  <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 text-left">
-    {[
-      ["6", "weeks"],
-      ["15", "students per specialization"],
-      ["3", "training stages"],
-      ["1", "portfolio-ready project"],
-    ].map(([value, label]) => (
-      <div key={label} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-        <p className="text-2xl font-black text-white">{value}</p>
-        <p className="text-xs text-gray-400 mt-1">{label}</p>
-      </div>
-    ))}
-  </div>
-  <p className="mt-5 text-gray-300 text-sm sm:text-base">
-    Limited to <span className="font-semibold">15 students per specialization</span>.{" "}
-    <button
-      onClick={onApplyClick}
-      className="text-blue-600 font-semibold hover:text-blue-700"
-    >
-      Apply Now
-    </button>
-  </p>
-</div>
-
-        {/* STEPS */}
-      <div className="space-y-14">
-
-        {/* STEP 1 */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8">
+    <main className="bg-[#030712] text-white">
+      <section className="relative overflow-hidden bg-[#070b14] px-6 pb-20 pt-36 text-white md:pb-28">
+        <div className="absolute -right-20 top-28 h-72 w-72 rounded-full border border-blue-500/20 md:h-[30rem] md:w-[30rem]" />
+        <div className="relative mx-auto grid max-w-7xl items-end gap-12 lg:grid-cols-[1.15fr_.85fr]">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold">
-                1
-              </span>
-              <span className="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold">
-                Online Training
-              </span>
-            </div>
+            <p className="mb-6 text-xs font-bold uppercase tracking-[0.35em] text-blue-400">BDLG Aviation Academy</p>
+            <h1 className="max-w-4xl text-5xl font-black leading-[.95] tracking-tight md:text-7xl lg:text-[88px]">Learn to fly. Build what&apos;s next.</h1>
+            <p className="mt-8 max-w-xl text-lg leading-8 text-gray-300">Practical drone pilot training for people and teams ready to turn aerial technology into real-world capability.</p>
+            <button onClick={onApplyClick} className="mt-9 inline-flex items-center gap-4 bg-blue-600 px-7 py-4 text-sm font-bold text-white transition hover:bg-blue-700">Start your training <FaArrowRight /></button>
+          </div>
+          <div className="relative min-h-[300px] overflow-hidden border border-white/10 bg-white/5 p-5">
+            <img src={Actual} alt="Drone pilot preparing for field training" className="h-[300px] w-full object-cover opacity-80" />
+            <div className="absolute bottom-8 left-8 max-w-[210px] border-l-2 border-blue-400 pl-4 text-sm leading-6 text-white">Nigeria&apos;s practical pathway to confident, professional drone operations.</div>
+          </div>
+        </div>
+      </section>
 
-            <h3 className="text-xl md:text-3xl font-bold mb-3">
-              Weeks 1–4: Build Your Foundation
-            </h3>
+      <section className="px-6 py-20 md:py-28"><div className="mx-auto max-w-7xl"><div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-400">Our courses</p><h2 className="mt-3 max-w-2xl text-4xl font-black leading-tight md:text-6xl">Choose your route into the sky.</h2></div><p className="max-w-sm text-base leading-7 text-gray-400">Personalized attention, field-ready skills, and a training path that grows with your ambition.</p></div><div className="grid gap-px bg-white/10 md:grid-cols-3">{courses.map((course) => <article key={course.code} className="bg-[#030712] p-7 md:p-9"><span className="text-sm font-bold text-blue-400">{course.code}</span><h3 className="mt-16 text-2xl font-black leading-tight">{course.title}</h3><p className="mt-4 leading-7 text-gray-400">{course.detail}</p></article>)}</div></div></section>
 
-            <p className="text-gray-600 mb-3">
-              Gain deep theoretical knowledge and hands-on virtual experience guided by industry experts.
+      <section className="bg-[#0c1320] px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-400">
+                Who should enroll?
             </p>
+            <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight md:text-6xl">
+                A place for every kind of aviation ambition.
+            </h2>
+            <div className="mt-14 grid gap-x-10 md:grid-cols-2">
+                {audiences.map(([title, text], index) => <div key={title} className="border-t border-white/10 py-7">
+                <div className="flex gap-6"><span className="text-sm font-bold text-blue-400">0{index + 1}</span><div><h3 className="text-xl font-black">{title}</h3><p className="mt-2 max-w-md leading-7 text-gray-400">{text}</p></div></div></div>)}</div></div></section>
 
-            {/* Desktop */}
-            <ul className="hidden md:block space-y-2 text-gray-600">
-              <li>✔ Drone regulations & airspace laws</li>
-              <li>✔ Specialization-specific theory</li>
-              <li>✔ Virtual flight simulations</li>
-              <li>✔ Mission planning tools</li>
-              <li>✔ Weekly live mentoring sessions</li>
-            </ul>
+      <section className="px-6 py-20 md:py-28"><div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.75fr_1.25fr]"><div><p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-400">Our flight plan</p><h2 className="mt-4 text-4xl font-black leading-tight md:text-6xl">From first lesson to certified pilot.</h2><p className="mt-6 max-w-md leading-7 text-gray-400">A structured route that combines theory, simulation, and supervised flight time.</p></div><div>{journey.map(([number, title, text]) => <div key={number} className="flex gap-6 border-t border-white/10 py-6"><span className="text-sm font-bold text-blue-400">{number}</span><div><h3 className="text-xl font-black">{title}</h3><p className="mt-1 text-gray-400">{text}</p></div></div>)}</div></div></section>
 
-            {/* Mobile Toggle */}
-            <div className="md:hidden">
-              {openStep === 1 && (
-                <ul className="space-y-2 text-gray-600 mb-3">
-                  <li>✔ Drone regulations & airspace laws</li>
-                  <li>✔ Specialization-specific theory</li>
-                  <li>✔ Virtual flight simulations</li>
-                  <li>✔ Mission planning tools</li>
-                  <li>✔ Weekly live mentoring sessions</li>
-                </ul>
-              )}
+      <section className="bg-[#070b14] px-6 py-20 text-white md:py-28"><div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2"><img src={Online} alt="Drone training session" className="h-[360px] w-full object-cover" /><div><p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-400">Why train with BDLG?</p><h2 className="mt-4 text-4xl font-black leading-tight md:text-6xl">Real missions. Real instructors. Real momentum.</h2><div className="mt-8 space-y-4">{["Small classes with focused instructor attention", "Hands-on training with real UAV systems", "Safety, regulations, and mission planning built in", "A portfolio-ready project before you graduate"].map((item) => <p key={item} className="flex items-center gap-3 text-gray-300"><FaCheck className="shrink-0 text-blue-400" />{item}</p>)}</div><button onClick={onApplyClick} className="mt-9 inline-flex items-center gap-4 bg-blue-600 px-7 py-4 text-sm font-bold text-white transition hover:bg-blue-700">Apply for the next cohort <FaArrowRight /></button></div></div></section>
 
-              <button
-                onClick={() => toggleStep(1)}
-                className="text-blue-600 font-semibold text-sm"
-              >
-                {openStep === 1 ? "Read Less" : "Read More"}
-              </button>
-            </div>
-          </div>
+      <section className="px-6 py-20 md:py-28"><div className="mx-auto max-w-4xl"><p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-400">Frequently asked</p><h2 className="mt-4 text-4xl font-black md:text-6xl">Questions before takeoff.</h2><div className="mt-10">{faqs.map(([question, answer], index) => <div key={question} className="border-t border-white/10"><button onClick={() => setOpenFaq(openFaq === index ? null : index)} className="flex w-full items-center justify-between gap-5 py-6 text-left text-lg font-bold">{question}<FaChevronDown className={`shrink-0 text-blue-400 transition ${openFaq === index ? "rotate-180" : ""}`} /></button>{openFaq === index && <p className="max-w-2xl pb-6 leading-7 text-gray-400">{answer}</p>}</div>)}</div></div></section>
 
-          <div className="relative">
-            <img
-              src={Online}
-              alt="Online training"
-              className="w-full h-64 md:h-72 object-cover rounded-2xl shadow-xl"
-            />
-            <div className="absolute inset-0 bg-blue-600/10 rounded-2xl" />
-          </div>
-        </div>
-
-        {/* STEP 2 */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8">
-          <div className="relative md:order-1 order-2">
-            <img
-              src={Actual}
-              alt="Physical training"
-              className="w-full h-64 md:h-72 object-cover rounded-2xl shadow-xl"
-            />
-            <div className="absolute inset-0 bg-green-600/10 rounded-2xl" />
-          </div>
-
-          <div className="md:order-2 order-1">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-green-600 text-white font-bold">
-                2
-              </span>
-              <span className="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-semibold">
-                Physical Training
-              </span>
-            </div>
-
-            <h3 className="text-xl md:text-3xl font-bold mb-3">
-              Week 5: Real-World Application
-            </h3>
-
-            <p className="text-gray-600 mb-3">
-              Transition into real flight environments and execute missions under expert supervision.
-            </p>
-
-            {/* Desktop */}
-            <ul className="hidden md:block space-y-2 text-gray-600">
-              <li>✔ Hands-on flight training (Lekki facility)</li>
-              <li>✔ Equipment handling</li>
-              <li>✔ Real-world mission scenarios</li>
-              <li>✔ Data collection & field work</li>
-              <li>✔ Emergency procedures</li>
-            </ul>
-
-            {/* Mobile Toggle */}
-            <div className="md:hidden">
-              {openStep === 2 && (
-                <ul className="space-y-2 text-gray-600 mb-3">
-                  <li>✔ Hands-on flight training (Lekki facility)</li>
-                  <li>✔ Equipment handling</li>
-                  <li>✔ Real-world mission scenarios</li>
-                  <li>✔ Data collection & field work</li>
-                  <li>✔ Emergency procedures</li>
-                </ul>
-              )}
-
-              <button
-                onClick={() => toggleStep(2)}
-                className="text-green-600 font-semibold text-sm"
-              >
-                {openStep === 2 ? "Read Less" : "Read More"}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* STEP 3 */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-600 text-white font-bold">
-                3
-              </span>
-              <span className="bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm font-semibold">
-                Assessment
-              </span>
-            </div>
-
-            <h3 className="text-xl md:text-3xl font-bold mb-3">
-              Week 6: Certification & Launch
-            </h3>
-
-            <p className="text-gray-600 mb-3">
-              Demonstrate your skills through exams, projects, and portfolio reviews.
-            </p>
-
-            {/* Desktop */}
-            <ul className="hidden md:block space-y-2 text-gray-600">
-              <li>✔ Written certification exam</li>
-              <li>✔ Practical flight test</li>
-              <li>✔ Final project submission</li>
-              <li>✔ Portfolio review</li>
-              <li>✔ Career guidance</li>
-            </ul>
-
-            {/* Mobile Toggle */}
-            <div className="md:hidden">
-              {openStep === 3 && (
-                <ul className="space-y-2 text-gray-600 mb-3">
-                  <li>✔ Written certification exam</li>
-                  <li>✔ Practical flight test</li>
-                  <li>✔ Final project submission</li>
-                  <li>✔ Portfolio review</li>
-                  <li>✔ Career guidance</li>
-                </ul>
-              )}
-
-              <button
-                onClick={() => toggleStep(3)}
-                className="text-purple-600 font-semibold text-sm"
-              >
-                {openStep === 3 ? "Read Less" : "Read More"}
-              </button>
-            </div>
-          </div>
-
-          <div className="relative">
-            <img
-              src={Launch}
-              alt="Assessment"
-              className="w-full h-64 md:h-72 object-cover rounded-2xl shadow-xl"
-            />
-            <div className="absolute inset-0 bg-purple-600/10 rounded-2xl" />
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-14 rounded-3xl border border-blue-400/20 bg-blue-500/10 p-6 md:p-8">
-        <h3 className="text-2xl font-bold text-white">What you leave with</h3>
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-sm text-gray-300">
-          <p>Flight safety and regulatory confidence</p>
-          <p>Mission planning and field execution skills</p>
-          <p>Evidence of practical project work</p>
-          <p>Career guidance for your next opportunity</p>
-        </div>
-        <button
-          onClick={onApplyClick}
-          className="mt-7 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700 transition"
-        >
-          Apply for the next cohort
-        </button>
-      </div>
-    </section>
+      <section className="bg-blue-600 px-6 py-20 text-center"><p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-100">Ready for takeoff?</p><h2 className="mx-auto mt-4 max-w-3xl text-4xl font-black leading-tight text-white md:text-6xl">Your next chapter starts in the cockpit.</h2><button onClick={onApplyClick} className="mt-8 inline-flex items-center gap-4 bg-[#030712] px-8 py-4 text-sm font-bold text-white transition hover:bg-[#0c1320]">Join the next cohort <FaArrowRight /></button></section>
+    </main>
   );
 };
 
