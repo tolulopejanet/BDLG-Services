@@ -41,15 +41,15 @@ const Navbar = () => {
       `}
     >
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-20 flex justify-between items-center overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-20 flex items-center justify-between gap-4 overflow-hidden">
 
         {/* LOGO */}
-        <Link to="/" className="flex items-center gap-3">
-          <img src={BDLG} className="w-25" />
+        <Link to="/" className="flex min-w-0 shrink items-center gap-3">
+          <img src={BDLG} alt="BDLG Services logo" className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16" />
 
-          <div>
-            <h2 className="text-white font-bold">BDLG</h2>
-            <p className="text-xs text-gray-400">Services</p>
+          <div className="min-w-0 leading-none">
+            <h2 className="truncate text-base font-black tracking-[0.1em] text-white sm:text-lg">BDLG</h2>
+            <p className="mt-1 truncate text-[9px] font-bold uppercase tracking-[0.22em] text-blue-400 sm:text-[10px]">Services</p>
           </div>
         </Link>
 
@@ -93,9 +93,11 @@ const Navbar = () => {
 
         {/* MOBILE BUTTON */}
         <button
+          type="button"
           onClick={() => setMenuOpen(!menuOpen)}
           className="
             md:hidden
+            shrink-0
             text-white
             p-2
             rounded-lg
