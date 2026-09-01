@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaArrowRight, FaCheck, FaChevronDown } from "react-icons/fa";
 import Online from "../assets/train.png";
-import Actual from "../assets/actual.avif";
+import Actual from "../assets/train1.jpeg";
 
 const courses = [
   { code: "01", title: "Basic RPAS Certificate", detail: "Build a confident foundation in drone safety, systems, and flight principles." },

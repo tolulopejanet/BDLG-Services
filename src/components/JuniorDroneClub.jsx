@@ -19,6 +19,8 @@ const JuniorDroneClub = () => {
             <p className="text-gray-400 leading-8">
               Our club combines flight fundamentals, safety training, and real-world exercises so young learners can gain confidence quickly in a structured environment.
             </p>
+            
+            
           </div>
           <div className="space-y-4">
             {[
