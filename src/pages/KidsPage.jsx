@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import kid from "../assets/kid.png";
 import Drone2 from "../assets/kid-fun.jpg";
-import Train from "../assets/train.png";
+import Train from "../assets/kid4.webp";
 import DroneInt from "../assets/kid2.jpeg";
 
 const KidsPage = () => {
