@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const JuniorDroneClub = () => {
   return (
@@ -13,14 +14,18 @@ const JuniorDroneClub = () => {
             <p className="text-blue-400 uppercase tracking-[0.3em] text-sm">
               Junior Drone Club
             </p>
-            <h2 className="text-4xl font-black mb-6">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
               Start strong with practical training for beginners and youth.
             </h2>
             <p className="text-gray-400 leading-8">
               Our club combines flight fundamentals, safety training, and real-world exercises so young learners can gain confidence quickly in a structured environment.
             </p>
-            
-            
+            <Link
+              to="/kids"
+              className="inline-block mt-8 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+            >
+              Learn More
+            </Link>
           </div>
           <div className="space-y-4">
             {[

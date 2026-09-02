@@ -15,7 +15,7 @@ const CareerHero = ({ onApplyClick }) => {
             <p className="text-blue-400 uppercase tracking-[0.3em] text-sm">
               Career Growth
             </p>
-            <h1 className="text-5xl md:text-6xl font-black leading-tight">
+            <h1 className="text-4xl md:text-5xl font-black leading-tight">
               Build a future in drone operations, engineering, and aerial intelligence.
             </h1>
             <p className="text-gray-300 max-w-xl leading-8">

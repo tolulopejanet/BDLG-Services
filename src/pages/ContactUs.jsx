@@ -24,8 +24,15 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccessMessage("Your message has been sent successfully!");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    
+    const phoneNumber = "2349114448021"; // WhatsApp format without + symbol
+    const message = `CONTACT REQUEST\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n*Subject:* ${formData.subject}\n\n*Message:*\n${formData.message}`;
+
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, "_blank");
+    
+    setSuccessMessage("Opening WhatsApp to send your message...");
+    setFormData({ name: "", email: "", subject: "", message: "", phone: "" });
     setTimeout(() => setSuccessMessage(""), 5000);
   };
   return (

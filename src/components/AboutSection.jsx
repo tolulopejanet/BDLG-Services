@@ -38,7 +38,7 @@ const AboutSection = () => {
 
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-black leading-tight">
+          <h2 className="text-4xl md:text-5xl font-black leading-tight">
 
             Revolutionizing Industries With
 

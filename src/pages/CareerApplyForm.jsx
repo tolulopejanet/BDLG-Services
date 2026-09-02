@@ -83,12 +83,12 @@ const CareerApplyForm = ({ showApplyForm, onClose, onChange, onSubmit, formData 
                   onChange={onChange}
                   className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 p-4 text-white outline-none focus:border-blue-500"
                 >
-                  <option value="">Select specialization</option>
-                  <option value="Photography & Cinematography">Photography & Cinematography</option>
-                  <option value="Surveillance & Security">Surveillance & Security</option>
-                  <option value="Industrial Inspection">Industrial Inspection</option>
-                  <option value="Mapping & Surveying">Mapping & Surveying</option>
-                  <option value="Drone Programming">Drone Programming</option>
+                  <option value="" className="text-black">Select specialization</option>
+                  <option value="Photography & Cinematography" className="text-black">Photography & Cinematography</option>
+                  <option value="Surveillance & Security" className="text-black">Surveillance & Security</option>
+                  <option value="Industrial Inspection" className="text-black">Industrial Inspection</option>
+                  <option value="Mapping & Surveying" className="text-black">Mapping & Surveying</option>
+                  <option value="Drone Programming" className="text-black">Drone Programming</option>
                 </select>
               </div>
 

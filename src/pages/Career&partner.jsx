@@ -6,7 +6,7 @@ import CareerHero from "../components/CareerHero";
 import JuniorDroneClub from "../components/JuniorDroneClub";
 import TrainingStructure from "../components/TrainingStructure";
 import ChooseYourPath from "../components/ChooseYourPath";
-import CareerApplyForm from "../components/CareerApplyForm";
+import CareerApplyForm from "./CareerApplyForm";
 import { partners } from "../assets/data";
 
 export default function CareerPage() {
@@ -27,8 +27,14 @@ export default function CareerPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Career application:", formData);
-    alert("Thanks for applying! We will be in touch soon.");
+    
+    const phoneNumber = "2349114448021"; // WhatsApp format without + symbol
+    const message = `CAREER APPLICATION\n\n*Full Name:* ${formData.fullName}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n*Specialization:* ${formData.specialization}\n\n*Experience:*\n${formData.experience}`;
+
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, "_blank");
+    
+    alert("Thanks for applying! Please send the message to WhatsApp to confirm your application.");
     setFormData({ fullName: "", email: "", phone: "", specialization: "", experience: "" });
     setShowApplyForm(false);
   };

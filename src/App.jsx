@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import ServicesPage from './pages/ServicePage';
 import ProductsPage from './pages/ProductPage';
 import AboutUsPage from './pages/AboutUs';
+import KidsPage from './pages/KidsPage';
+import KidsRegistration from './pages/KidsRegistration';
 // import BlogPage from './pages/Blog';
 import ContactUsPage from './pages/ContactUs';
 import ScheduleCallPage from './pages/ScheduleCall';
@@ -33,6 +35,8 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/aboutus" element={<AboutUsPage />} />
+        <Route path="/kids" element={<KidsPage />} />
+        <Route path="/kids/register" element={<KidsRegistration />} />
         {/* <Route path="/blog" element={<BlogPage />} /> */}
         <Route path="/schedule" element={<ScheduleCallPage />} />
         <Route path="/contact" element={<ContactUsPage />} />

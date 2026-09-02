@@ -12,8 +12,6 @@ const ScheduleCallPage = () => {
   });
   const [success, setSuccess] = useState("");
 
-  const companyEmail = "hello@bdlgservices.com";
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -22,14 +20,13 @@ const ScheduleCallPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const subject = encodeURIComponent(`Schedule call request from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nPreferred date: ${formData.date}\nPreferred time: ${formData.time}\nTopic: ${formData.topic}\n\nNotes:\n${formData.notes}`
-    );
+    const phoneNumber = "2349114448021"; // WhatsApp format without + symbol
 
-    const mailtoLink = `mailto:${companyEmail}?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-    setSuccess("Your request is ready to send via email. Please complete the message in your mail client.");
+    const message = `SCHEDULE CALL REQUEST\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n*Preferred Date:* ${formData.date}\n*Preferred Time:* ${formData.time}\n*Topic:* ${formData.topic}\n\n*Notes:*\n${formData.notes}`;
+
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, "_blank");
+    setSuccess("Redirecting to WhatsApp. Please send the message to confirm your request!");
   };
 
   return (
