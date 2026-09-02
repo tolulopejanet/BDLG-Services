@@ -7,7 +7,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative h-[70vh] w-full flex items-center justify-center px-4 pt-20">
+    <section className="relative h-[85vh] w-full flex items-center justify-center px-4 pt-20">
 <div className="absolute inset-0 overflow-hidden">
       <video
         autoPlay
