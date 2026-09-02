@@ -28,11 +28,11 @@ const FeaturesSection=()=>{
 
 return(
 
-<section className="py-32 px-6">
+<section className="py-12 px-6 md:py-20">
 
 <div className="max-w-7xl mx-auto">
 
-<div className="text-center mb-16">
+<div className="text-center mb-8 md:mb-12">
 
 <p className="text-blue-400 uppercase tracking-widest">
 Capabilities

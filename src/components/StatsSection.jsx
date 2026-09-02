@@ -11,7 +11,7 @@ const StatsSection=()=>{
 
 return(
 
-<section className="py-28 px-6">
+<section className="py-12 px-6 md:py-20">
 
 <div className="max-w-7xl mx-auto">
 

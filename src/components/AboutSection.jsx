@@ -11,7 +11,7 @@ import {
 
 const AboutSection = () => {
   return (
-    <section className=" py-28 px-6 bg-[#030712] text-white">
+    <section className="py-12 px-6 bg-[#030712] text-white md:py-20">
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
 

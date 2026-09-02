@@ -40,7 +40,7 @@ const Navbar = () => {
       `}
     >
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-20 flex items-center justify-between gap-4 overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 h-20 flex items-center justify-between gap-4 overflow-hidden">
 
         {/* LOGO */}
         <Link to="/" className="flex min-w-0 shrink items-center gap-3">
@@ -53,7 +53,7 @@ const Navbar = () => {
         </Link>
 
         {/* DESKTOP MENU */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-10">
 
           {navLinks.map((link) => {
             const active = location.pathname === link.href;
@@ -85,7 +85,7 @@ const Navbar = () => {
         {/* CTA */}
         <Link
           to="/schedule"
-          className="hidden md:block px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-xl transition"
+          className="hidden lg:block px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-xl transition"
         >
           Schedule Call
         </Link>
@@ -95,7 +95,7 @@ const Navbar = () => {
           type="button"
           onClick={() => setMenuOpen(!menuOpen)}
           className="
-            md:hidden
+            lg:hidden
             shrink-0
             text-white
             p-2
@@ -123,11 +123,11 @@ const Navbar = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={() => setMenuOpen(false)}
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden overflow-hidden"
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden overflow-hidden"
       />
 
       {/* Drawer wrapper */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-50 md:hidden">
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-50 lg:hidden">
 
         <motion.div
           initial={{ x: "100%" }}
@@ -146,7 +146,7 @@ const Navbar = () => {
             z-50
             px-8
             pt-28
-            md:hidden 
+            lg:hidden 
             overflow-y-auto
             pointer-events-auto
           "
